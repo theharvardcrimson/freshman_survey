@@ -115,14 +115,15 @@ header h1 {
 }
 
 #regions-inner {
-    display: inline-block;
-    text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #paper {
 	float: left;
 	overflow: hidden;
-	margin: 50px auto;
+	width: 72%;
+	margin: 50px 0;
 }
 
 .region {
@@ -133,9 +134,7 @@ header h1 {
 
 #regions-right {
 	float: left;
-	/* width: 28%; */
-	width: 400px;
-	max-width: 28%;
+	width: 28%;
 }
 
 #paper h2 {
@@ -381,7 +380,7 @@ header ul li.inactive:hover {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
 	#subnav {
 		display: none;
 	}
@@ -397,14 +396,13 @@ header ul li.inactive:hover {
 	}
 
 	#paper {
-		margin: 0 auto;
+	    width: 100%;
 	}
 
 	#regions-right {
 		clear: both;
 		margin: 0 auto;
 		width: 100%;
-		max-width: 100%;
 	}
 
 	#regions-right h3 {
