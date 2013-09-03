@@ -110,6 +110,15 @@ header h1 {
 	line-height: 1.5em;
 }
 
+#regions-outer {
+    text-align: center;
+}
+
+#regions-inner {
+    display: inline-block;
+    text-align: left;
+}
+
 #paper {
 	float: left;
 	overflow: hidden;
@@ -124,7 +133,9 @@ header h1 {
 
 #regions-right {
 	float: left;
-	width: 28%;
+	/* width: 28%; */
+	width: 400px;
+	max-width: 28%;
 }
 
 #paper h2 {
@@ -393,6 +404,7 @@ header ul li.inactive:hover {
 		clear: both;
 		margin: 0 auto;
 		width: 100%;
+		max-width: 100%;
 	}
 
 	#regions-right h3 {
