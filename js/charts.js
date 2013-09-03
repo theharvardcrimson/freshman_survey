@@ -1,3 +1,40 @@
+// Debounce resizing from 
+// github.com/louisremi/jquery-smartresize/blob/master/jquery.debouncedresize.js
+(function($) {
+    var $event = $.event,
+        $special,
+        resizeTimeout;
+
+    $special = $event.special.debouncedresize = {
+        setup: function() {
+            $( this ).on( "resize", $special.handler );
+        },
+        teardown: function() {
+            $( this ).off( "resize", $special.handler );
+        },
+        handler: function( event, execAsap ) {
+            // Save the context
+            var context = this,
+                args = arguments,
+                dispatch = function() {
+                    // set correct event type
+                    event.type = "debouncedresize";
+                    $event.dispatch.apply( context, args );
+                };
+
+            if ( resizeTimeout ) {
+                clearTimeout( resizeTimeout );
+            }
+
+            execAsap ?
+                dispatch() :
+                resizeTimeout = setTimeout( dispatch, $special.threshold );
+        },
+        threshold: 150
+    };
+})(jQuery);
+
+
 $(function () {	
 
 	// // Radialize the colors
@@ -304,7 +341,7 @@ $(function () {
     		delay: 100000000,              //  The delay between slide animations (in milliseconds)
     		keys: false,               //  Enable keyboard (left, right) arrow shortcuts
     		dots: true,               //  Display dot navigation
-    		fluid: false              //  Support responsive design. May break non-responsive designs
+    		fluid: true              //  Support responsive design. May break non-responsive designs
     	});
         var onclick = function () {
             var fn = this.className.split(' ')[1];
@@ -316,7 +353,7 @@ $(function () {
     });
                     
 
-    $(window).resize(function () {
+    $(window).on('debouncedresize', function () {
         for (chart in Highcharts.charts) {
             Highcharts.charts[chart].redraw();
         }
