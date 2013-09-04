@@ -1,13 +1,4 @@
 $(function() {
-
-	var vertCenter = function () {
-		$('.vert-center').css('margin-top', function() {
-			return (window.innerHeight - $(this).height()) / 2
-		});
-	};
-
-	vertCenter();
-
 	var getCurrentRow = function () {
 		var windowMid = $(document).scrollTop() + (window.innerHeight + $('header').height()) / 2;
 		var closestMid = $(document).height()
@@ -48,7 +39,6 @@ $(function() {
 
 
 	$(window).resize(function() {
-		vertCenter();
 		currentRow = getCurrentRow();
 	});
 

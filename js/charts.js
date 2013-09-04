@@ -120,8 +120,6 @@ $(function () {
             options = $.extend(options, columnOptions);
         }
 
-        console.log(options);
-
         $.get(filename, function(data) {
             // Split the lines
             data = data.replace(/\r(?!\n)/g, "\n");
@@ -354,7 +352,7 @@ $(function () {
                     
 
     $(window).on('debouncedresize', function () {
-        for (chart in Highcharts.charts) {
+        for (var chart in Highcharts.charts) {
             Highcharts.charts[chart].redraw();
         }
     });
