@@ -37,7 +37,6 @@ $(function() {
 		}, 1000);				
 	});
 
-
 	$(window).resize(function() {
 		currentRow = getCurrentRow();
 	});
@@ -64,5 +63,15 @@ $(function() {
 		    scrollTop: goToRow.offset().top,
 		    scrollLeft: 0
 		}, 1000);
+	});
+});
+
+$(window).load(function () {
+	$('#subnav').affix({
+		offset: {
+			top: function () {
+				return $('body').children('img').first().height() - 15;
+			}
+		}
 	});
 });

@@ -38,7 +38,6 @@ a:hover {
 }
 
 p {
-	max-width: 500px;
 	margin: 10px auto;
 }
 
@@ -47,23 +46,21 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 37px;
 	background: rgba(187,6,0,0.95);
-	box-shadow: 0 2px 2px #ccc;
 	z-index: 10;
 }
 
-header #logo a {
+.header-logo {
 	float: left;
-	font-family: 'Big Caslon';
-	color: white;
-	font-size: 25px;
-	line-height: 41px;
-	margin: 0 0 0 10px;
+	padding: 7px 0 9px;
+}
+
+.header-logo img {
+	vertical-align: middle;
 }
 
 
-header #logo a:hover {
+.header-logo:hover {
 	text-decoration: none;
 }
 
@@ -75,15 +72,7 @@ header h1 {
 }
 
 #main {
-	width: 80%;
-	margin: 0 auto;
-	margin-left: 20%
-}
-
-.scroll-row {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	margin-left: 220px;
 }
 
 #cover {
@@ -102,11 +91,15 @@ header h1 {
 	font-size: 35px;
 	font-size: italic;
 	text-align: center;
-	clear: both;
 	padding: 20px 0;
 }
 
-#intro p {
+.intro {
+	margin: 0 auto;
+	width: 75%;
+}
+
+.intro p {
 	font-size: 20px;
 	line-height: 1.5em;
 }
@@ -145,6 +138,11 @@ header h1 {
 	margin: 10px 0;		
 }
 
+.scroll-row {
+	margin: 0 auto;
+	width: 75%;
+}
+
 .scroll-row h2 {
 	text-align: center;
 	font-family: 'Colaborate Thin';
@@ -165,15 +163,16 @@ header h1 {
 }
 
 hr {
-	clear: both;
-	width: 60%;
+	background: #ccc;
+	border: none;
+	height: 1px;
+	margin: 40px auto;
+	width: 80%;
 }
 
 #subnav {
 	float: left;
-	margin: 300px 10px;
-	position: fixed;
-	width: 20%;
+	width: 200px;
 }
 
 #subnav ul {
@@ -185,7 +184,7 @@ hr {
 	font-family: 'Lato', sans-serif;
 	font-size: 30px;
 	line-height: 1em;
-	padding: 20px 0;
+	padding: 10px 0;
 	cursor: pointer;
 }
 
@@ -193,6 +192,9 @@ hr {
 	color: #ba0600
 }
 
+.scroll-row p {
+	width: 80%;
+}
 
 /* nav buttons */
 
@@ -220,6 +222,9 @@ hr {
 	background-color: rgba(186,6,0,0.2);
 }
 
+.full-width {
+	max-width: 100%;
+}
 
 /* Layout */
 
@@ -285,28 +290,36 @@ hr {
 
 	text-indent: -999em;
 
-	border: 2px solid #ccc;
+	border: 1px solid #be110c;
 	border-radius: 6px;
 
 	cursor: pointer;
-	opacity: .4;
 
-	-webkit-transition: background .5s, opacity .5s;
-	-moz-transition: background .5s, opacity .5s;
-	transition: background .5s, opacity .5s;
+	-webkit-transition: background .2s, opacity .2s;
+	-moz-transition: background .2s, opacity .2s;
+	transition: background .2s, opacity .2s;
 }
 
 .banner .dots li.active {
-	background: #ba0600;
-	opacity: 1;
+	background: #be110c;
+}
+
+.banner .dots li:hover {
+	background: #720000;
+	border-color: #720000;
 }
 
 .unslider-arrow {
-	color: #999;
+	color: #be110c;
 	font-size: 36px;
 	font-weight: 200;
 	position: relative;
 	top: -30px;
+}
+
+a.unslider-arrow:hover {
+	color: #720000;
+	text-decoration: none;
 }
 
 .unslider-arrow.next {
@@ -335,7 +348,7 @@ hr {
 }
 
 header ul {
-	display: inline-block;
+	float: left;
 	list-style: none;
 	padding-left: 40px;
 	margin: 0;
@@ -355,31 +368,15 @@ header ul li {
 }
 
 header ul li:hover, header ul li.active {
-	background-color: white;
-	color: #ba0600;
-	box-shadow: 0 3px #fff;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #fff;
 }
 
 header ul li.inactive:hover {
 	background-color: #999;
 	color: white;
-	box-shadow: none;
 	cursor: default;
 }
-
-.clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
 
 @media (max-width: 1030px) {
 	#subnav {
@@ -431,4 +428,18 @@ header ul li.inactive:hover {
 		width: 100%;
 		background-color: #ba0600
 	}
+
+	.leaderboard.ad {
+		display: none;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.affix {
+	position: fixed;
+	top: 20px;
 }
