@@ -109,7 +109,6 @@ header h1 {
 }
 
 #regions-inner {
-    width: 80%;
     margin: 0 auto;
 }
 
@@ -309,6 +308,10 @@ hr {
 	border-color: #720000;
 }
 
+.scroll-row:nth-last-child(2) .banner ul li{
+    height: 750px;
+}
+
 .unslider-arrow {
 	color: #be110c;
 	font-size: 36px;
@@ -378,7 +381,7 @@ header ul li.inactive:hover {
 	cursor: default;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 890px) {
 	#subnav {
 		display: none;
 	}
@@ -397,6 +400,10 @@ header ul li.inactive:hover {
 	    width: 100%;
 	}
 
+    #regions .banner ul li{
+        height: 800px;
+    }
+
 	#regions-right {
 		clear: both;
 		margin: 0 auto;
@@ -413,6 +420,10 @@ header ul li.inactive:hover {
 		font-size: 20px;
 		margin: 0;
 	}
+
+    .scroll-row:nth-last-child(2) .banner ul li{
+        height: 950px;
+    }
 
 	#nav-button-next {
 		bottom: 50px;

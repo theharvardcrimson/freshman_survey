@@ -1,3 +1,6 @@
+window_width = 0;
+aspect_ratio = 309 / 518;
+
 window.onload = function () {
     // var R = Raphael("paper", 300, 300);
     // var attr = {
@@ -7,8 +10,9 @@ window.onload = function () {
     //     "stroke-linejoin": "round"
     // };
 
-	var paper = Raphael('paper', '485', '285');
+    window_width = $('#paper').width();
 
+	var paper = Raphael('paper', '485', '285');
 
 	var us = {};
 
@@ -29,8 +33,8 @@ window.onload = function () {
 	us.northeast = path_l;
 	us.southeast = path_v;
 
+    resize_regions(us);
 	for (elt in us) {
-		us[elt].transform("s0.5,0.5,0,0");
 		$("#"+elt).hide();
 	}
 
@@ -55,4 +59,23 @@ window.onload = function () {
             };
         })(us[state], state);
     }
+
+    $(window).on('debouncedresize', function() {
+        resize_regions(us);
+    });
 };
+
+function resize_regions(us) {
+        var old_width = 950;
+        var new_width = $('#paper').width();
+        var ratio = new_width / old_width; 
+        $('#paper svg').attr({
+            'width': new_width,
+            'height': new_width * aspect_ratio
+        });
+        for (var elt in us) {
+            var t = "s" + ratio + "," + ratio + ",0,0";
+            us[elt].transform(t);
+        }
+    
+}
