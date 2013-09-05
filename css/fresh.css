@@ -244,7 +244,8 @@ hr {
 .banner {
 	position: relative;
 	overflow: auto;
-	height: auto;
+    /* Hack to override css set by javascript */
+	height: auto !important;
 	padding-bottom: 30px;
 }
 
@@ -308,7 +309,7 @@ hr {
 	border-color: #720000;
 }
 
-.scroll-row:nth-last-child(2) .banner ul li{
+#salary .banner ul li{
     height: 750px;
 }
 
@@ -401,7 +402,7 @@ header ul li.inactive:hover {
 	}
 
     #regions .banner ul li{
-        height: 800px;
+        height: 750px;
     }
 
 	#regions-right {
@@ -421,8 +422,8 @@ header ul li.inactive:hover {
 		margin: 0;
 	}
 
-    .scroll-row:nth-last-child(2) .banner ul li{
-        height: 950px;
+    #salary .banner ul li{
+        height: 750px;
     }
 
 	#nav-button-next {
@@ -446,8 +447,9 @@ header ul li.inactive:hover {
 }
 
 .wrapper {
-	margin: 0 auto;
-	max-width: 960px;
+    margin 0 0 0 50px;
+	/* margin: 0 auto; */
+	/* max-width: 960px; */
 }
 
 .affix {
