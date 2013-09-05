@@ -42,9 +42,6 @@ $(function() {
 	});
 
 
-	$("header ul li.inactive").tooltip();
-
-
 	$('.nav-button').click(function() {
 		direction = $(this).attr('data-direction');
 		prevRow = currentRow.prevAll('.scroll-row:first');
