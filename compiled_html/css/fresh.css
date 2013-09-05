@@ -447,7 +447,7 @@ header ul li.inactive:hover {
 }
 
 .wrapper {
-    margin 0 0 0 50px;
+    margin-left: 50px;
 	/* margin: 0 auto; */
 	/* max-width: 960px; */
 }
