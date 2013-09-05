@@ -40,27 +40,6 @@ $(function() {
 	$(window).resize(function() {
 		currentRow = getCurrentRow();
 	});
-
-
-	$('.nav-button').click(function() {
-		direction = $(this).attr('data-direction');
-		prevRow = currentRow.prevAll('.scroll-row:first');
-		nextRow = currentRow.nextAll('.scroll-row:first');
-
-		if (direction == 'next' && nextRow.length != 0) {
-			goToRow = nextRow;
-		}
-		else if (direction == 'prev' && prevRow.length != 0) {
-			goToRow = prevRow;
-		}
-
-		currentRow = goToRow;
-
-		$('html, body').animate({
-		    scrollTop: goToRow.offset().top,
-		    scrollLeft: 0
-		}, 1000);
-	});
 });
 
 $(window).load(function () {
