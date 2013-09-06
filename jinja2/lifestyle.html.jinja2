@@ -3,6 +3,7 @@
 {% block js %}
     <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lifestyle.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
@@ -14,8 +15,10 @@
 
 {% block content %}
     <div class="intro scroll-row">
-        <div id="subhead">Makeup of the Class</div>
-        <p>From religion and politics, to drugs and alcohol, to mental health and technology, it is clear that the newest members of the Harvard community have much in common and plenty to disagree about. Part IV of The Crimson’s freshmen survey takes a broad look at just what the members of the Class of 2017 do and believe.  Most of those surveyed are virgins, most consider themselves liberal, and most have an iPhone in their pocket, but a closer look at the more than 1,300 respondents—nearly 80 percent of the class—reveals a world of difference in the way freshmen lead their lives.</p> 
+        <div id="subhead">Lifestyle</div>
+        <p>From religion and politics, to drugs and alcohol, to mental health and technology, it is clear that the newest members of the Harvard community have much in common and plenty to disagree about. Part IV of The Crimson’s freshmen survey takes a broad look at just what the members of the Class of 2017 do and believe.  Most of those surveyed are virgins, most consider themselves liberal, and most have an iPhone in their pocket, but a closer look at the more than 1,300 respondents—nearly 80 percent of the class—reveals a world of difference in the way freshmen lead their lives.</p>
+        <p>Read Part IV of The Crimson's four-part series on the freshman survey <a href="http://www.thecrimson.com/article/2013/9/6/freshman-survey-part-iv/">here</a>.</p>
+
     </div>
 
     <div class="scroll-row">
@@ -219,7 +222,7 @@
                 <a href="#drugs-gender-tab" data-toggle="tab">Drug Use by Gender</a>
             </li>
             <li>
-                <a href="#drugs-school-tab" data-toggle="tab">Drug Use by Type of School</a>
+                <a href="#drugs-school-type-tab" data-toggle="tab">Drinkers by School Type</a>
             </li>
             <li>
                 <a href="#drugs-athletes-tab" data-toggle="tab">Drug Use by Recruited Athletes</a>
@@ -254,6 +257,26 @@
                 <div id="drugs-fake-urban"-urban class="graph"></div>
                 <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
             </li>
+            <li id="drugs-gender-tab">
+                <h2>Drug Use by Gender</h2>
+                <div id="drugs-gender"-urban class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-school-type-tab">
+                <h2>Drug Use by Type of School</h2>
+                <div id="drugs-school-type"-urban class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-athletes-tab">
+                <h2>Drug Use by Recruited Athletes</h2>
+                <div id="drugs-athletes"-urban class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-religion-tab">
+                <h2>Drinkers by Religion</h2>
+                <div id="drugs-religion" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>            
         </ul>
     </div>
     <div class="scroll-row">
@@ -283,6 +306,61 @@
             <li id="mental-sexuality-tab">
                 <h2>Mental Health Counseling by Sexuality</h2>
                 <div id="mental-sexuality" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Technology</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#computers-raw-tab" data-toggle="tab">Mac vs. PC</a>
+            </li>
+            <li>
+                <a href="#phone-type-tab" data-toggle="tab">Type of Phone</a>
+            </li>
+            <li>
+                <a href="#income-mac-tab" data-toggle="tab">Income vs. Mac</a>
+            </li>
+            <li>
+                <a href="#income-phone-tab" data-toggle="tab">Income vs. iPhone</a>
+            </li>
+            <li>
+                <a href="#facebook-tab" data-toggle="tab">Facebook Usage</a>
+            </li>
+            <li>
+                <a href="#twitter-tab" data-toggle="tab">Twitter Usage</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="computers-raw-tab" class="active">
+                <h2>Mental Health Counseling</h2>
+                <div id="computers"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="phone-type-tab">
+                <h2>Mental Health Counseling by Parents' Income</h2>
+                <div id="phone-type" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="income-mac-tab">
+                <h2>Mac Ownership by Parents’ Income</h2>
+                <div id="income-mac" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="income-phone-tab">
+                <h2>iPhone Ownership by Parents’ Income</h2>
+                <div id="income-mac" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="facebook-tab">
+                <h2>Mac Ownership by Parents’ Income</h2>
+                <div id="facebook" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="twitter-tab">
+                <h2>Mac Ownership by Parents’ Income</h2>
+                <div id="twitter" class="graph"></div>
                 <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
             </li>
         </ul>
