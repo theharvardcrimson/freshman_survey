@@ -86,7 +86,7 @@ header h1 {
 	position: relative;
 }
 
-#subhead {
+#subhead, .subhead {
 	font-family: 'Colaborate Thin', sans-serif;
 	font-size: 35px;
 	font-size: italic;
@@ -108,9 +108,116 @@ header h1 {
 	width: 100%;
 }
 
-.survey-section img {
+.landing > p {
+	clear: both;
+}
+
+#makeup1 {
+	background-image: url('../img/makeup1.jpeg');
+}
+
+#makeup2 {
+	background-image: url('../img/makeup2.jpeg');
+}
+
+#ad1 {
+	background-image: url('../img/ad1.jpeg');
+}
+
+#ad2 {
+	background-image: url('../img/ad2.jpeg');
+}
+
+#ac1 {
+	background-image: url('../img/ac1.jpeg');
+}
+
+#ac2 {
+	background-image: url('../img/ac2.jpeg');
+}
+
+#sex1 {
+	background-image: url('../img/sex1.jpeg');
+}
+
+#sex2 {
+	background-image: url('../img/sex2.jpeg');
+}
+
+.section-container {
+	width: 1150px;
+	margin: 0 auto;
+}
+
+.survey-section {
+	display: block;
+	width: 555px;
+	float: left;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+
+@media (max-width: 1278px) {
+	.section-container {
+		width: 100%;
+		margin: 0 0;
+	}
+
+	.survey-section {
+		margin: 0 auto;
+		float: none;
+	}
+
+	.survey-section > div.card {
+		margin-bottom: 40px;
+	}
+}
+
+.survey-section > div.card {
+	position: relative;
+	background-size: 100%;
+	color: #ffffff;
+	font-family: 'Lato';
+	font-size: 1.5em;
 	height: 200px;
 	width: 265px;
+	border: 1px solid white;
+	margin-right: 10px;
+	float: left;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+
+.survey-section > div.card > .text {
+	position: relative;
+	top: 170px;
+	height: 30px;
+	display: block;
+	width: 100%;
+	background-color: rgba(186, 6, 0, 0.6);
+}
+
+.survey-section > div.card > .text > span {
+	position: relative;
+	left: 10px;
+	top: 5px;
+}
+
+div.card {
+	box-shadow: 0px 0px 0px #ffffff;
+}
+
+.cover {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.landingcontainer {
+	width: 90%;
+	margin: 0 auto;
 }
 
 #regions-outer {

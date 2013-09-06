@@ -1,30 +1,45 @@
 {% extends 'jinja2/_base.html.jinja2' %}
 
-{% block content %}
+{% block js %}
+    <script src="js/landing.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+
+{% block extra_content %}
+<div class="landingcontainer">
 	<div class="intro landing">
-	    <div id="subhead">The Freshman Class</div>
+	    <!-- <div id="subhead">The Freshman Class</div> -->
+	    <p></p>
 	    <p>Scroll through the graphs and charts on the following pages for a visual representation of the Class of 2017.</p>
 	    <p>The data was collected in an email survey conducted by The Crimson during the month of August. Nearly 80 percent of the class responded (though not all of them finished the survey).</p>
 	    <p>Our presentation of the data assumes a random sampling and therefore discounts any selection bias that may exist.</p>
 	</div>
 
 	<div class="landing">
-		<div class="survey-section">
-			<img src="img/makeup1.jpeg">
-			<img src="img/makeup2.jpeg">
+		<div class="section-container">
+			<div class="survey-section">
+				<div class="subhead">Makeup of the Class</div>
+				<div class="card" id="makeup1" data-destination="makeup.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="makeup2" data-destination="http://www.thecrimson.com/article/2013/9/3/freshmen-employment-demographics-geography"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+			<div class="survey-section">
+				<div class="subhead">Admissions</div>
+				<div class="card" id="ad1" data-destination="admissions.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="ad2" data-destination="http://www.thecrimson.com/article/2013/9/4/freshman-survey-admissions-aid/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
 		</div>
-		<div class="survey-section">
-			<img src="img/ad1.jpeg">
-			<img src="img/ad2.jpeg">
-		</div>
-		<div class="survey-section">
-			<img src="img/ac1.jpeg">
-			<img src="img/ac2.jpeg">
-		</div>
-		<div class="survey-section">
-			<img src="img/sex1.jpeg">
-			<img src="img/sex2.jpeg">
+		<div class="section-container">
+			<div class="survey-section">
+				<div class="subhead">Academics</div>
+				<div class="card" id="ac1" data-destination="academics.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="ac2" data-destination="http://www.thecrimson.com/article/2013/9/5/freshman-survey-academics-extracurriculars/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+			<div class="survey-section">
+				<div class="subhead">Lifestyle</div>
+				<div class="card" id="sex1" data-destination="lifestyle.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="sex2" data-destination="http://www.thecrimson.com/article/2013/9/6/freshman-survey-part-iv/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
 		</div>
 	</div>
-
+</div>
 {% endblock %}

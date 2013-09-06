@@ -10,6 +10,7 @@
 		<script src="js/jquery-csv.min.js"></script>
 		<script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-animate-shadow.js" type="text/javascript" charset="utf-8"></script>
 
 		<script src="js/highcharts.js"></script>
 		<script src="js/highcharts-more.js"></script>
@@ -27,6 +28,7 @@
 					<img src="img/logo.png" height="18" width="215" />
 				</a>
 				<ul class="header-nav">
+					<a href="index.html"><li{% if filename=='index.html' %} class="active"{% endif %}>Introduction</li></a>
                     <a href="makeup.html"><li{% if filename=='makeup.html' %} class="active"{% endif %}>Makeup of the Class</li></a>
                     <a href="admissions.html"><li{% if filename=='admissions.html' %} class="active"{% endif %}>Admissions</li></a>
                     <a href="academics.html"><li{% if filename=='academics.html' %} class="active"{% endif %}>Academics/Extracuriculars</li></a>
@@ -47,5 +49,6 @@
                 {% block content %}{% endblock %}
 			</div>
 		</div>
+		{% block extra_content %}{% endblock %}
 	</body>
 </html>
