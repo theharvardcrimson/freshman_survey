@@ -698,6 +698,16 @@ header ul li.inactive:hover {
 	margin-right: auto;
 }
 
+#footer {
+	font-style: italic;
+	font-size: 0.8em;
+	color: #bbbbbb;
+	clear: both;
+	text-align: right;
+	padding-right: 5px;
+	margin-bottom: 10px;
+}
+
 @media (max-width: 1070px) {
 	.nav > li > a {
 		font-size: 1em;
