@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
     // Admissions
-    createChart('column','data/1/0/sat_income.csv', '#sat-income');
-    createMultiChart('column', ['Male', 'Female'], [colorset[colorindex++], colorset[colorindex++]], ['data/1/0/sat_male.csv', 'data/1/0/sat_female.csv'], '#sat-gender');    
-    createMultiChart('column', ['Public', 'Private'], [colorset[colorindex++], colorset[colorindex++]], ['data/1/0/sat_public.csv', 'data/1/0/sat_private.csv'], '#sat-school-type');    
+    createNumericChart('column','data/1/0/sat_income.csv', '#sat-income');
+    createFullChart('column', ['Male', 'Female'], null, ['data/1/0/sat_male.csv', 'data/1/0/sat_female.csv'], '', '#sat-gender');    
+    createFullChart('column', ['Public', 'Private'], null, ['data/1/0/sat_public.csv', 'data/1/0/sat_private.csv'], '', '#sat-school-type');    
 
     // Financial Aid
     createChart('pie','data/1/1/financial_aid_raw.csv', '#financial-aid');
@@ -24,4 +24,12 @@ $(document).ready(function() {
     createChart('pie','data/0/0/athletes_raw.csv', '#athletes-raw');
     createChart('bar','data/1/3/recruited_sat.csv', '#sat-athletes');
     createChart('bar','data/1/3/recruited_income.csv', '#income-athletes');
+
+    var width = $('.graph').first().parents('.scroll-row').first().width();
+    $('.graph').width(width);
+    for (var chart in Highcharts.charts) {
+        if (Highcharts.charts[chart] != null) {
+            Highcharts.charts[chart].redraw();
+        }
+    }
 });

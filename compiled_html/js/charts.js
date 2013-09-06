@@ -29,7 +29,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
     createFullChart(type, titles, colors, filenames, '%', divsel)
 }
 
-function createFullChart(type, titles, colors, filenames, unit,divsel) {
+function createFullChart(type, titles, colors, filenames, unit, divsel) {
     var options = {
         chart: {
             defaultSeriesType: type,
@@ -81,13 +81,13 @@ function createFullChart(type, titles, colors, filenames, unit,divsel) {
                     color: '#000000',
                     connectorColor: '#000000',
                     formatter: function() {
-                        return '<b>'+ this.point.name +'</b>: '+ Math.round(10 * this.percentage) / 10 +' %';
+                        return '<b>'+ this.point.name +'</b>: '+ Math.round(10 * this.percentage) / 10 + unit;
                     }
                 }
             }
         },
         tooltip: {
-            pointFormat: '<b>{point.percentage:.1f}%</b>'
+            pointFormat: '<b>{point.percentage:.1f}' + unit + '</b>'
         },
     };
 
@@ -101,7 +101,7 @@ function createFullChart(type, titles, colors, filenames, unit,divsel) {
             }
         },
         tooltip: {
-            pointFormat: '<b>{point.y:.1f}%</b><br/>'
+            pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
 
@@ -115,7 +115,7 @@ function createFullChart(type, titles, colors, filenames, unit,divsel) {
             }
         },
         tooltip: {
-            pointFormat: '<b>{point.y:.1f}%</b><br/>'
+            pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
 
