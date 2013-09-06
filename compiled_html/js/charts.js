@@ -16,11 +16,20 @@ function createChart(type, filename, divsel) {
     createMultiChart(type, null, null, [filename], divsel);
 }
 
+function createNumericChart(type, filename, divsel)
+{
+    createFullChart(type, null, null, [filename], '', divsel);
+}
+
 function createChartColor(type, color, filename, divsel) {
     createMultiChart(type, null, [color], [filename], divsel);
 }
 
 function createMultiChart(type, titles, colors, filenames, divsel) {
+    createFullChart(type, titles, colors, filenames, '%', divsel)
+}
+
+function createFullChart(type, titles, colors, filenames, unit,divsel) {
     var options = {
         chart: {
             defaultSeriesType: type,
@@ -48,7 +57,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
         },
         series: [],
         tooltip: {
-            valueSuffix: '%'
+            valueSuffix: unit
         },
         title: {
             text: ''
@@ -88,7 +97,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
         },
         yAxis: {
             title: {
-                text: 'Percentage'
+                text: unit == '%' ? 'Percentage' : ''
             }
         },
         tooltip: {
@@ -102,7 +111,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
         },
         yAxis: {
             title: {
-                text: 'Percentage'
+                text: unit == '%' ? 'Percentage' : ''
             }
         },
         tooltip: {

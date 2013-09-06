@@ -104,6 +104,15 @@ header h1 {
 	line-height: 1.5em;
 }
 
+.landing {
+	width: 100%;
+}
+
+.survey-section img {
+	height: 200px;
+	width: 265px;
+}
+
 #regions-outer {
     text-align: center;
 }
