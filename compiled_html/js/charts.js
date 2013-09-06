@@ -42,6 +42,17 @@ $(function () {
             ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
 
 
+    // Academics/Extracurriculars
+
+    // In High School
+    createChart('pie','data/2/0/hours_studying_past.csv', '#study-habits-past');
+    createChart('pie','data/2/0/math_level.csv', '#math-level');
+    createChart('bar','data/2/0/extracurriculars.csv', '#extracurriculars');
+    createChart('bar','data/2/0/presidents_raw.csv', '#leadership');
+    createChart('bar','data/2/0/government_belief.csv', '#government');
+    createMultiChart('column', ['Public', 'Private'], [colors[colorindex++], colors[colorindex++]], ['data/2/0/public_vs_math.csv', 'data/2/0/private_vs_math.csv'], '#math-school-type');
+
+
 	$('.banner').each(function() {
         var $this = $(this);
         var unslider = $this.unslider({
