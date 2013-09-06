@@ -1,3 +1,7 @@
+var colorset = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970',
+        '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
+var colorindex = 0;
+
 $(function () {	
 
 	// // Radialize the colors
@@ -10,10 +14,6 @@ $(function () {
 	//         ]
 	//     };
 	// });
-
-    var colors = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970',
-        '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
-    var colorindex = 0;
 
 
     // Makeup of the Class
@@ -32,13 +32,13 @@ $(function () {
 
     // Employment
     createChart('pie','data/0/2/starting_salary.csv', '#starting-salary');
-    createMultiChart('column', ['Male', 'Female'], [colors[colorindex++], colors[colorindex++]], 
+    createMultiChart('column', ['Male', 'Female'], [colorset[colorindex++], colorset[colorindex++]], 
             ['data/0/2/starting-salary-male.csv', 'data/0/2/starting-salary-female.csv'], "#starting-salary-vs-gender");
     createMultiChart('bar', ['2017', '2027'], ['#1abc9c', '#ba0600'], 
             ['data/0/2/sector-start-2017.csv', 'data/0/2/sector-start-2027.csv'], "#sector-start-over-time");
     createMultiChart('bar', ['Male', 'Female'], ['#71c3ff', '#ba0600'], 
             ['data/0/2/sector-start-male.csv', 'data/0/2/sector-start-female.csv'], "#sector-start-by-gender");
-    createMultiChart('bar', ['Private', 'Public'], [colors[colorindex++], colors[colorindex++]], 
+    createMultiChart('bar', ['Private', 'Public'], [colorset[colorindex++], colorset[colorindex++]], 
             ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
 
 
@@ -115,7 +115,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
             }
         },
         legend: {
-            enabled: true
+            enabled: filenames.length > 1
         },
         series: [],
         tooltip: {
@@ -203,26 +203,31 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
             if (colors != null) {
                 options.series[datanum]['color'] = colors[datanum];
             }
+            else {
+                options.series[datanum]['color'] = colorset[colorindex++];
+            }
 
             // Iterate over the lines and add categories or series
             $.each(lines, function(lineNo, line) {
 
-                var items = line.split(',');
+                if (line != '' && line != null) {
+                    var items = line.split(',');
 
-                if (type == 'pie') {
-                    options.series[datanum].data.push([items[0], parseFloat(items[1])]);
-                }
-                else if (type == 'column') {
-                    if (datanum == 0) {
-                        options.xAxis.categories.push(items[0]); // set first column from CSV as category
+                    if (type == 'pie') {
+                        options.series[datanum].data.push([items[0], parseFloat(items[1])]);
                     }
-                    options.series[datanum].data.push(parseFloat(items[1]));
-                }
-                else if (type == 'bar') {
-                    if (datanum == 0) {
-                        options.xAxis.categories.push(items[0]); // set first column from CSV as category
+                    else if (type == 'column') {
+                        if (datanum == 0) {
+                            options.xAxis.categories.push(items[0]); // set first column from CSV as category
+                        }
+                        options.series[datanum].data.push(parseFloat(items[1]));
                     }
-                    options.series[datanum].data.push(parseFloat(items[1]));
+                    else if (type == 'bar') {
+                        if (datanum == 0) {
+                            options.xAxis.categories.push(items[0]); // set first column from CSV as category
+                        }
+                        options.series[datanum].data.push(parseFloat(items[1]));
+                    }
                 }
             });
 
