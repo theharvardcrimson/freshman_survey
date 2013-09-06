@@ -73,6 +73,10 @@ function createChart(type, filename, divsel) {
     createMultiChart(type, null, null, [filename], divsel);
 }
 
+function createChart(type, color, filename, divsel) {
+    createMultiChart(type, null, [color], [filename], divsel);
+}
+
 function createMultiChart(type, titles, colors, filenames, divsel) {
     var options = {
         chart: {
@@ -146,13 +150,13 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
     }
 
     var barOptions = {
+        xAxis: {
+            categories: [],
+        },
         yAxis: {
             title: {
                 text: 'Percentage'
             }
-        },
-        xAxis: {
-            categories: [],
         },
         tooltip: {
             pointFormat: '<b>{point.y:.1f}%</b><br/>'
