@@ -32,13 +32,13 @@ $(function () {
 
     // Employment
     createChart('pie','data/0/2/starting_salary.csv', '#starting-salary');
-    createMultiChart('column', ['Male', 'Female'], [colorset[colorindex++], colorset[colorindex++]], 
+    createMultiChart('column', ['Male', 'Female'], null, 
             ['data/0/2/starting-salary-male.csv', 'data/0/2/starting-salary-female.csv'], "#starting-salary-vs-gender");
     createMultiChart('bar', ['2017', '2027'], ['#1abc9c', '#ba0600'], 
             ['data/0/2/sector-start-2017.csv', 'data/0/2/sector-start-2027.csv'], "#sector-start-over-time");
     createMultiChart('bar', ['Male', 'Female'], ['#71c3ff', '#ba0600'], 
             ['data/0/2/sector-start-male.csv', 'data/0/2/sector-start-female.csv'], "#sector-start-by-gender");
-    createMultiChart('bar', ['Private', 'Public'], [colorset[colorindex++], colorset[colorindex++]], 
+    createMultiChart('bar', ['Private', 'Public'], null, 
             ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
 
 
@@ -50,7 +50,7 @@ $(function () {
     createChart('bar','data/2/0/extracurriculars.csv', '#extracurriculars');
     createChart('bar','data/2/0/presidents_raw.csv', '#leadership');
     createChart('bar','data/2/0/government_belief.csv', '#government');
-    createMultiChart('column', ['Public', 'Private'], [colors[colorindex++], colors[colorindex++]], ['data/2/0/public_vs_math.csv', 'data/2/0/private_vs_math.csv'], '#math-school-type');
+    createMultiChart('column', ['Public', 'Private'], null, ['data/2/0/public_vs_math.csv', 'data/2/0/private_vs_math.csv'], '#math-school-type');
 
 
 	$('.banner').each(function() {
