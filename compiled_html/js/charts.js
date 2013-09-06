@@ -17,7 +17,9 @@ $(document).ready(function () {
 
     $(window).on('debouncedresize', function () {
         for (var chart in Highcharts.charts) {
-            Highcharts.charts[chart].redraw();
+            if (Highcharts.charts[chart] != null) {
+                Highcharts.charts[chart].redraw();
+            }
         }
     });
 });
@@ -37,7 +39,11 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            style: {position: "inherit"}
+            style: {position: "inherit"},
+            spacingTop: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            spacingBottom: 0
         },
         credits: {
             enabled: false

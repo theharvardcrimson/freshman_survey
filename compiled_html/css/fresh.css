@@ -577,6 +577,11 @@ header ul li.inactive:hover {
   border-bottom-color: #ffffff;
 }
 
+.highcharts-container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @media (max-width: 1070px) {
 	.nav > li > a {
 		font-size: 1em;
