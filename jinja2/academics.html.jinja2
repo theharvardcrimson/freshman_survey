@@ -22,7 +22,7 @@
     </div>
 
     <div class="scroll-row">
-        <h1>Demographics</h1>
+        <h1>In High School</h1>
         <ul class="nav nav-tabs">
             <li class="active">
                 <a href="#study-habits-past-tab" data-toggle="tab">Study Habits</a>
@@ -83,101 +83,34 @@
         </script>
     </div>
 
-    <div class="scroll-row" id="regions">
-        <h1>Geography</h1>
+    <div class="scroll-row">
+        <h1>At Harvard</h1>
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#regions-outer" data-toggle="tab">Demographics</a>
+                <a href="#study-habits-future-tab" data-toggle="tab">Study Habits</a>
             </li>
             <li>
-                <a href="#urbanity-tab" data-toggle="tab">Community Type</a>
+                <a href="#secondary-tab" data-toggle="tab">Secondary/Citation</a>
+            </li>
+            <li>
+                <a href="#concentration-raw-tab" data-toggle="tab">Concentrations</a>
             </li>
         </ul>
         <ul class="tab-panes">
-            <li id="regions-outer" class="clearfix active">
-                <div id="regions-inner">
-                    <div id="paper">
-                        <p>Forty-one percent of incoming freshmen come from the Northeast, with Westerners, Midwesterners, Southeasterners, and Southwesterners following in descending order. An additional 11 percent of surveyed freshmen hail from abroad.</p>
-                    </div>
-                    <div id="regions-right">
-                        <h2>Mouseover region to see data.</h2>
-                        <div id="northeast" class="region">
-                            <h3>
-                                <div class="region-stat">41.1%</div>
-                                of students are from the Northeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">73.4%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">88.7%</div>
-                                of students from the Northeast will return after graduating.
-                            </h3>
-                        </div>
-                        <div id="southeast" class="region">
-                            <h3>
-                                <div class="region-stat">11.7%</div>
-                                of students are from the Southeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.5%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">12.2%</div>
-                                of students from the Southeast will return after graduating.
-                            </h3>
-                        </div>
-                        <div id="midwest" class="region">
-                            <h3>
-                                <div class="region-stat">7.8%</div>
-                                of students are from the Southwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">1.3%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">10.0%</div>
-                                of students from the Southwest will return after graduating.
-                            </h3>
-                        </div>
-                        <div id="southwest" class="region">
-                            <h3>
-                                <div class="region-stat">13.8%</div>
-                                of students are from the Midwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.6%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">18.6%</div>
-                                of students from the Midwest will return after graduating.
-                            </h3>
-                        </div>
-                        <div id="west" class="region">
-                            <h3>
-                                <div class="region-stat">14.5%</div>
-                                of students are from the West.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">10.7%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">42.2%</div>
-                                of students from the West will return after graduating.
-                            </h3>
-                        </div>                              
-                    </div>                              
-                </div>
+            <li id="study-habits-future-tab" class="active">
+                <h2>Anticipated College Study Habits</h2>
+                <div id="study-habits-future"></div>
+                <p>A plurality of respondents indicated that they anticipate studying for between 20 and 29 hours a week in college, and more respondents expect to study 50 or more than 10 or fewer. In contrast, a plurality said they spent fewer than 10 hours a week studying in high school.</p>
             </li>
-            <li id="urbanity-tab">
-                <h2>Community Type</h2>
-                <div id="urbanity"></div>
-                <p>Sixty-five percent of surveyed freshmen come from a suburban community, with urban and rural residents following at 27 and 8 percent, respectively. In comparison, 71 percent of Americans surveyed in the 2010 U.S. census reported that they live in cities, 10 percent in suburbs, and 19 percent in rural regions.</p>
+            <li id="secondary-tab">
+                <h2>Anticipated Secondaries and Language Citations</h2>
+                <div id="secondary"></div>
+                <p>Twenty-three percent of respondents intend to pursue both a secondary and a language citation at Harvard, and twenty-eight percent plan to pursue neither.</p>
+            </li>
+            <li id="concentration-raw-tab">
+                <h2>Anticipated Concentrations</h2>
+                <div id="concentration-raw"></div>
+                <p>Just 11 percent of respondents said that they plan to pursue a concentration in the arts and humanities field. Sixteen percent of the College students concentrate in the humanities, and several months ago, a faculty committee released several reports on the discipline.</p>
             </li>
         </ul>
     </div>
@@ -189,51 +122,41 @@
     </div>
 
     <div class="scroll-row" id="salary">
-        <h1>Employment</h1>
+        <h1>Athletics</h1>
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#starting-salary-tab" data-toggle="tab">Starting Salary</a>
+                <a href="#athletes-raw-tab" data-toggle="tab">Numbers</a>
             </li>
             <li>
-                <a href="#starting-salary-vs-gender-tab" data-toggle="tab">Starting Salary by Gender</a>
+                <a href="#attrition-athletics-tab" data-toggle="tab">Attrition</a>
             </li>
             <li>
-                <a href="#sector-start-over-time-tab" data-toggle="tab">Field</a>
+                <a href="#concussions-tab" data-toggle="tab">Concussions Numbers</a>
             </li>
             <li>
-                <a href="#sector-start-by-gender-tab" data-toggle="tab">Field by Gender</a>
-            </li>
-            <li>
-                <a href="#sector-start-by-school-type-tab" data-toggle="tab">Field by Secondary School</a>
+                <a href="#concussions-view-tab" data-toggle="tab">Concussions Opinions</a>
             </li>
         </ul>
         <ul class="tab-panes">
-            <li id="starting-salary-tab" class="active">
-                <h2>Anticipated Starting Salary</h2>
-                <div id="starting-salary"></div>
-                <p>Half of the Class of 2017 expects to earn a starting salary of between $50,000 and $90,000 right after graduation. The majority of the remaining half expects salaries below $50,000 that first year.</p>
+            <li id="athletes-raw-tab" class="active">
+                <h2>Athletes at Harvard</h2>
+                <div id="athletes-raw"></div>
+                <p>Roughly 20 percent of the Harvard student body are members of a varsity athletics team. 12 percent of incoming freshmen reported being recruited to the College to play a sport, and an additional 9 percent planned to walk on to a team. Over a quarter of those walk-ons said they planned to join one of Harvard’s four crew teams.</p>
             </li>
-            <li id="starting-salary-vs-gender-tab">
-                <h2>Anticipated Starting Salary by Gender</h2>
-                <div id="starting-salary-vs-gender" class="graph"></div>
-                <p>Surveyed male freshmen anticipate a significantly higher starting salary than their female counterparts across income brackets.</p>
-                <p>At the lower end, 13 percent of women and 6 percent of men said they anticipate making less than $30,000 immediately after graduation. In comparison, 10 percent of female graduating seniors and 9 percent of male graduating seniors surveyed by The Crimson last spring reported a starting salary below $30,000.</p>
-                <p>At the upper end, three percent of female freshman respondents and nine percent of male freshman respondents said they anticipate earning more than $110,000 immediately after graduation. In the Class of 2013, 2 percent of females and 8 percent of males reported a starting salary in that income bracket.</p>
+            <li id="attrition-athletics-tab">
+                <h2>Attrition from Athletics</h2>
+                <div id="attrition-athletics" class="graph"></div>
+                <p>Harvard does not release numbers on the rate of varsity athletes that play all four years. However, surveyed freshmen anticipated playing for their entire college career at different rates depending on their status as an official recruit or a walk-on, with 93 percent of recruits intending to play all four years but just 47 percent of walk-ons planning to do the same.</p>
             </li>
-            <li id="sector-start-over-time-tab">
-                <h2>Comparison of Anticipated Employment Field in 2017 and 2027</h2>
-                <div id="sector-start-over-time" class="graph"></div>
-                <p>Many surveyed freshmen said they expect their immediate post-graduate job to be different from their career 10 years down the line. For example, while just 6 percent of surveyed freshmen said they plan to work in the health field right after graduation, nearly a quarter of them said they anticipate doing so in 2027.</p>
+            <li id="concussions-tab">
+                <h2>Athletics and Concussions</h2>
+                <div id="concussions" class="graph"></div>
+                <p>Seventy eight percent of incoming recruited and walk-on athletes have never been concussed. According to Dr. Francis Wang, the head team physician for Harvard Athletics, roughly 55 Harvard athletes incurred a concussion during the 2011-12 season.</p>
             </li>
-            <li id="sector-start-by-gender-tab">
-                <h2>Anticipated Employment Field by Gender</h2>
-                <div id="sector-start-by-gender" class="graph"></div>
-                <p>Surveyed female freshmen are less likely than their male counterparts to see themselves in a career related to entrepreneurship or finance. They were more likely than freshmen men to envision themselves in a career in nonprofits and public service, health, and media or publishing.</p>
-            </li>
-            <li id="sector-start-by-school-type-tab">
-                <h2>Anticipated Career by Secondary School Type</h2>
-                <div id="sector-start-by-school-type" class="graph"></div>
-                <p>Surveyed freshmen who attended public high school were more likely than their public counterparts to say they plan to pursue a long-term career in education. Private school students, on the other hand, disproportionately reported interest in careers in business, finance, and arts, sports, or entertainment.</p>
+            <li id="concussions-view-tab">
+                <h2>Effect of Concussions on Attitude Towards Sport</h2>
+                <div id="concussions-view" class="graph"></div>
+                <p>The survey revealed different statistics on how concussions affect the way athletes feel about their sport. Of those who had been concussed, 19 percent reported that concussions had changed their approach or desire to play that sport while 5 percent of those who had not been concussed felt similarly. Repeated concussions have been linked to chronic traumatic encephalopathy (CTE), a progressive degenerative brain disease.</p>
             </li>
         </ul>
     </div>
