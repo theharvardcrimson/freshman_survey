@@ -52,6 +52,13 @@ $(function () {
     createChart('bar','data/2/0/government_belief.csv', '#government');
     createMultiChart('column', ['Public', 'Private'], [colors[colorindex++], colors[colorindex++]], ['data/2/0/public_vs_math.csv', 'data/2/0/private_vs_math.csv'], '#math-school-type');
 
+    // At Harvard
+    createChart('pie','data/2/1/hours_studying_future.csv', '#study-habits-future');
+    createChart('pie','data/2/1/secondary_raw.csv', '#secondary');
+
+
+    // Athletics
+
 
 	$('.banner').each(function() {
         var $this = $(this);
@@ -84,7 +91,7 @@ function createChart(type, filename, divsel) {
     createMultiChart(type, null, null, [filename], divsel);
 }
 
-function createChart(type, color, filename, divsel) {
+function createChartColor(type, color, filename, divsel) {
     createMultiChart(type, null, [color], [filename], divsel);
 }
 
