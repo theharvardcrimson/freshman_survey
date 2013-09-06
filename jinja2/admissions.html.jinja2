@@ -1,0 +1,171 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block nav_items %}
+    <li>In High School</li>
+    <li>At Harvard</li>
+    <li>Athletics</li>
+{% endblock %}
+
+{% block content %}
+    <div class="intro scroll-row">
+        <div id="subhead">Makeup of the Class</div>
+        <p>Part II of The Crimson’s Class of 2017 Survey examines admissions and financial aid at Harvard. According to reports from the survey, the average Harvard freshman receives financial aid, comes from a household that earns between $125,000 and $250,000 per year, and scored a 2237 on the SAT. Average standardized test scores varied by ethnicity and income, as well as varsity status--recruited athletes, on average, scored TKTKTK points lower on the SATs than their non-recruited classmates.</p>
+        <p>About 14 percent of the incoming freshman said their families earn above $500,000 per year, putting them among the top 1 percent of earners in the United States.</p>
+        <p>The average freshman respondent reported receiving financial aid from Harvard, coming from a household that earns between $125,000 and $250,00, and scoring between 2230 and 2240 on the SAT. Average standardized test scores varied by ethnicity, income, and varsity status. About 14 percent of incoming freshmen said they come from families with reported incomes above $500,000 a year, putting them among the top roughly 1 percent of earners in the United States.</p>
+        <p>Read Part II of The Crimson's four-part series on the freshman survey <a href="http://www.thecrimson.com/article/2013/9/4/freshman-survey-admissions-aid/">here</a>.</p>
+    </div>
+
+    <div class="scroll-row">
+        <h1>The Application</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#sat-tab" data-toggle="tab">SAT</a>
+            </li>
+            <li>
+                <a href="#gpa-tab" data-toggle="tab">GPA</a>
+            </li>
+            <li>
+                <a href="#sat-ethnicity-tab" data-toggle="tab">SAT by Ethnicity</a>
+            </li>
+            <li>
+                <a href="#sat-income-tab" data-toggle="tab">SAT by Income</a>
+            </li>
+            <li>
+                <a href="#sat-gender-tab" data-toggle="tab">SAT by Gender</a>
+            </li>
+            <li>
+                <a href="#sat-school-type-tab" data-toggle="tab">SAT by School Type</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="sat-tab" class="active">
+                <h2>Average SAT Scores</h2>
+                <div id="sat"></div>
+                <p>Freshman reported an average composite SAT score of 2237. Women slightly outscored men, 2246 vs. 2229. The reported average subject score was consistent across the three sections, with an average 748 in the math section, 746 on writing, and 744 on critical reading.</p>
+            </li>
+            <li id="gpa-tab">
+                <h2>Average GPAs</h2>
+                <div id="gpa" class="graph"></div>
+                <p>The average self-reported unweighted GPA on a 4.0 scale among the freshman class was 3.94. Fifty-four percent of students reported a perfect 4.0, and the lowest score reported was a 3.0.</p>
+            </li>
+            <li id="sat-ethnicity-tab">
+                <h2>Average SAT Scores by Ethnicity</h2>
+                <div id="sat-ethnicity"></div>
+                <p>Asian and Indian respondents reported the highest average SAT scores, while those of black or African-American descent reported the lowest.</p>
+            </li>
+            <li id="sat-income-tab">
+                <h2>Average SAT Scores by Income Bracket</h2>
+                <div id="sat-income" class="graph"></div>
+                <p>SAT and ACT scores tended to increase with increases in income bracket.</p>
+            </li>
+            <li id="sat-gender-tab">
+                <h2>Average SAT Scores by Gender</h2>
+                <div id="sat-gender"></div>
+                <p>Just 17 points separated reported men’s and women’s SATs, as female respondents reported slightly higher scores. The biggest difference by section came in the writing component, where females respondents outscored males by an average of 17 points. Women outscored men by 10 points in critical reading, and men topped women by 8 points in math.</p>
+            </li>
+            <li id="sat-school-type-tab">
+                <h2>Average SAT Scores by School Type</h2>
+                <div id="sat-school-type"></div>
+                <p>Reported SAT averages varied little by school type, with students from charter schools and non-denominational private schools reporting average composite scores 20 points above those of students from public and parochial schools.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_ATF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_ATF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row" id="regions">
+        <h1>At Harvard</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#study-habits-future-tab" data-toggle="tab">Study Habits</a>
+            </li>
+            <li>
+                <a href="#secondary-tab" data-toggle="tab">Secondary/Citation</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="study-habits-future-tab">
+                <h2>Anticipated College Study Habits</h2>
+                <div id="study-habits-future"></div>
+                <p>A plurality of respondents indicated that they anticipate studying for between 20 and 29 hours a week in college, and more respondents expect to study 50 or more than 10 or fewer. In contrast, a plurality said they spent fewer than 10 hours a week studying in high school.</p>
+            </li>
+            <li id="secondary-tab">
+                <h2>Anticipated Secondaries and Language Citations</h2>
+                <div id="secondary"></div>
+                <p>Twenty-three percent of respondents intend to pursue both a secondary and a language citation at Harvard, and twenty-eight percent plan to pursue neither.</p>
+            </li>
+            <li id="concentration-raw-tab">
+                <h2>Anticipated Concentrations</h2>
+                <div id="concentration-raw"></div>
+                <p>Just 11 percent of respondents said that they plan to pursue a concentration in the arts and humanities field. Sixteen percent of the College students concentrate in the humanities, and several months ago, a faculty committee released several reports on the discipline.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_BTF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row" id="salary">
+        <h1>Athletics</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#athletes-raw-tab" data-toggle="tab">Numbers</a>
+            </li>
+            <li>
+                <a href="#attrition-athletics-tab" data-toggle="tab">Attrition</a>
+            </li>
+            <li>
+                <a href="#concussions-tab" data-toggle="tab">Concussions Numbers</a>
+            </li>
+            <li>
+                <a href="#concussions-view-tab" data-toggle="tab">Concussions Opinions</a>
+            </li>
+            <li>
+                <a href="#sector-start-by-school-type-tab" data-toggle="tab">Field by Secondary School</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="athletes-raw-tab" class="active">
+                <h2>Athletes at Harvard</h2>
+                <div id="athletes-raw"></div>
+                <p>Roughly 20 percent of the Harvard student body are members of a varsity athletics team. 12 percent of incoming freshmen reported being recruited to the College to play a sport, and an additional 9 percent planned to walk on to a team. Over a quarter of those walk-ons said they planned to join one of Harvard’s four crew teams.</p>
+            </li>
+            <li id="attrition-athletics-tab">
+                <h2>Attrition from Athletics</h2>
+                <div id="attrition-athletics" class="graph"></div>
+                <p>Harvard does not release numbers on the rate of varsity athletes that play all four years. However, surveyed freshmen anticipated playing for their entire college career at different rates depending on their status as an official recruit or a walk-on, with 93 percent of recruits intending to play all four years but just 47 percent of walk-ons planning to do the same.</p>
+            </li>
+            <li id="concussions-tab">
+                <h2>Athletics and Concussions</h2>
+                <div id="concussions" class="graph"></div>
+                <p>Seventy eight percent of incoming recruited and walk-on athletes have never been concussed. According to Dr. Francis Wang, the head team physician for Harvard Athletics, roughly 55 Harvard athletes incurred a concussion during the 2011-12 season.</p>
+            </li>
+            <li id="concussions-view-tab">
+                <h2>Effect of Concussions on Attitude Towards Sport</h2>
+                <div id="concussions-view" class="graph"></div>
+                <p>The survey revealed different statistics on how concussions affect the way athletes feel about their sport. Of those who had been concussed, 19 percent reported that concussions had changed their approach or desire to play that sport while 5 percent of those who had not been concussed felt similarly. Repeated concussions have been linked to chronic traumatic encephalopathy (CTE), a progressive degenerative brain disease.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
+        <script type='text/javascript'>
+            if ($(window).width >= 728) {
+                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_728x90'); });
+            }
+        </script>
+    </div>
+{% endblock %}
