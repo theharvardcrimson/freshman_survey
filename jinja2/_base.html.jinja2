@@ -5,20 +5,22 @@
 		<link rel="stylesheet" type="text/css" href="css/fresh.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
- 		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
 
 		<script src="https://www.google.com/jsapi" type="text/javascript" charset="utf-8"></script>
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<script src="js/jquery-csv.min.js"></script>
-        <script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://code.highcharts.com/highcharts.js"></script>
 		<script src="http://code.highcharts.com/highcharts-more.js"></script>
 		<script src="http://code.highcharts.com/modules/exporting.js"></script>
 		<script src="js/unslider.min.js"></script>
 		<script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/debounce.js" type="text/javascript" charset="utf-8"></script>
-        {% block js %} {% endblock %}
+		
+		{% block js %}{% endblock %}
+
 		<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -27,9 +29,9 @@
 		  _gaq.push(['_trackPageview']);
 
 		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
 		</script>
@@ -58,16 +60,16 @@
 			googletag.enableServices();
 			});
 		</script>
-	    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson"></script>
-	    <script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson"></script>
+		<script>
 		  addthis.layers({
-		    'theme' : 'transparent',
-		    'share' : {
-		      'position' : 'right',
-		      'numPreferredServices' : 5
-		    }
+			'theme' : 'transparent',
+			'share' : {
+			  'position' : 'right',
+			  'numPreferredServices' : 5
+			}
 		  });
-	    </script>
+		</script>
 	</head>
 
 	<body>
@@ -77,10 +79,10 @@
 					<img src="img/logo.png" height="18" width="215" />
 				</a>
 				<ul class="header-nav">
-                    <li class="{% if filename=='index.html' %}active{% else %}inactive{% endif %}">Makeup of the Class</li>
-                    <li class="{{ class2 }}" title="To be released on 9/4/2013.">Admissions</li>
-                    <li class="{{ class2 }}" title="To be released on 9/5/2013.">Academics/Extracuriculars</li>
-                    <li class="{{ class2 }}" title="To be released on 9/6/2013.">Lifestyle</li>
+                    <li>Makeup of the Class</li>
+                    <li>Admissions</li>
+                    <li>Academics/Extracuriculars</li>
+                    <li>Lifestyle</li>
 				</ul>
 			</div>
 		</header>
