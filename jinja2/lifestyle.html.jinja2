@@ -1,0 +1,290 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block nav_items %}
+    <li>In High School</li>
+    <li>At Harvard</li>
+    <li>Athletics</li>
+{% endblock %}
+
+{% block content %}
+    <div class="intro scroll-row">
+        <div id="subhead">Makeup of the Class</div>
+        <p>From religion and politics, to drugs and alcohol, to mental health and technology, it is clear that the newest members of the Harvard community have much in common and plenty to disagree about. Part IV of The Crimson’s freshmen survey takes a broad look at just what the members of the Class of 2017 do and believe.  Most of those surveyed are virgins, most consider themselves liberal, and most have an iPhone in their pocket, but a closer look at the more than 1,300 respondents—nearly 80 percent of the class—reveals a world of difference in the way freshmen lead their lives.</p> 
+    </div>
+
+    <div class="scroll-row">
+        <h1>Religion</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#religion-tab" data-toggle="tab">Religion</a>
+            </li>
+            <li>
+                <a href="#religiosity-tab" data-toggle="tab">Religiosity</a>
+            </li>
+            <li>
+                <a href="#religion-region-tab" data-toggle="tab">Religion by Region</a>
+            </li>
+            <li>
+                <a href="#religion-income-tab" data-toggle="tab">Religiosity by Income</a>
+            </li>
+            <li>
+                <a href="#religion-race-tab" data-toggle="tab">Religiosity by Race</a>
+            </li>
+            <li>
+                <a href="#religion-religion-tab" data-toggle="tab">Strength of Belief by Religion</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="religion-tab" class="active">
+                <h2>Religion</h2>
+                <div id="religion"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="religiosity-tab">
+                <h2>Religiosity</h2>
+                <div id="religiosity" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="religion-region-tab">
+                <h2>Religion by Region</h2>
+                <div id="religion-region"></div>
+                <p>Catholicism was the most common religion among Northeasterners and Midwesterners, while Protestantism was the most popular religion among Southeasterners, Southwesterners, and Westerners.</p>
+                <p>Of students surveyed from outside the United States, roughly half identified themselves as atheist or agnostic.</p>
+                <p>In the Northeast, where two-fifths of respondents call home, 23 percent said they are Catholic, 17 percent said they are Protestant, and 14 percent—a figure twice as large as in any other region—identified as Jewish. Thirty-one percent of surveyed Northeasterners said they consider themselves atheist or agnostic.</p> 
+            </li>
+            <li id="religion-income-tab">
+                <h2>Religiosity by Income</h2>
+                <div id="religion-income" class="graph"></div>
+                <p>Students from lower- and middle-income families were more likely to identify as very religious than their wealthier peers. Students from households in the $250,000 to $500,000 a year bracket were most likely to call themselves not at all religious, and least likely to say they are very religious.</p> 
+            </li>
+            <li id="religion-race-tab">
+                <h2>Religiosity by Race</h2>
+                <div id="religion-race"></div>
+                <p>Catholicism was the most common religion among white students, while a plurality of Asian students identified as atheist or agnostic. Half of incoming Hispanics identified as Catholics.</p> 
+            </li>
+            <li id="religion-religion-tab">
+                <h2>Religiosity by Religion</h2>
+                <div id="religion-religion"></div>
+                <p>Of those respondents who reported adherence to a major religion, Jews are the least religious, with 12 percent saying they are religious or very religious. By contrast, of those who identified themselves as Mormon, 80 percent said they were religious or very religious. Fifty-four percent of Protestants, the largest self-reported religious group, identified themselves as religious or very religious.</p> 
+            </li>
+        </ul>
+    </div>
+
+    <div class="scroll-row">
+        <h1>Politics</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#politics-tab" data-toggle="tab">Political Persuasion</a>
+            </li>
+            <li>
+                <a href="#politics-region-tab" data-toggle="tab">Politics by Region</a>
+            </li>
+            <li>
+                <a href="#politics-religion-tab" data-toggle="tab">Politics by Religion</a>
+            </li>
+            <li>
+                <a href="#politics-income-tab" data-toggle="tab">Politics by Parents' Income</a>
+            </li>
+            <li>
+                <a href="#politics-sexuality-tab" data-toggle="tab">Politics by Sexual Orientation</a>
+            </li>
+            <li>
+                <a href="#politics-ethnicity-tab" data-toggle="tab">Politics by Ethnicity</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="politics-tab" class="active">
+                <h2>Political Persuasion</h2>
+                <div id="politics"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="politics-region-tab">
+                <h2>Politics by Region</h2>
+                <div id="politics-region"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="politics-religion-tab">
+                <h2>Politics by Religion</h2>
+                <div id="politics-religion"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="politics-income-tab">
+                <h2>Politics by Parents' Income</h2>
+                <div id="politics-income"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="politics-sexuality-tab">
+                <h2>Politics by Sexual Orientation</h2>
+                <div id="politics-sexuality"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="politics-ethnicity-tab">
+                <h2>Politics by Ethnicity</h2>
+                <div id="politics-ethnicity"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Sex</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#sex-tab" data-toggle="tab">Sexual Activity</a>
+            </li>
+            <li>
+                <a href="#sex-gender-tab" data-toggle="tab">Sexual Activity by Gender</a>
+            </li>
+            <li>
+                <a href="#sex-age-tab" data-toggle="tab">Age of First Sexual Activity</a>
+            </li>
+            <li>
+                <a href="#sex-partners-tab" data-toggle="tab">Sexual Partners</a>
+            </li>
+            <li>
+                <a href="#sex-religion-tab" data-toggle="tab">Sexual Activity by Religion</a>
+            </li>
+            <li>
+                <a href="#sex-partners-gender-tab" data-toggle="tab">Sexual Partners by Gender</a>
+            </li>
+            <li>
+                <a href="#sex-partners-athletes-tab" data-toggle="tab">Sexual Partners by Recruited Athletes</a>
+            </li>
+            <li>
+                <a href="#sex-orientation-tab" data-toggle="tab">Sexual Partners by Sexual Orientation</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="sex-tab" class="active">
+                <h2>Sexual Activity</h2>
+                <div id="sex"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="sex-gender-tab">
+                <h2>Sexual Activity by Gender</h2>
+                <div id="sex-gender" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="sex-age-tab">
+                <h2>Age of First Sexual Activity</h2>
+                <div id="sex-age" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="sex-partners-tab">
+                <h2>Sexual Partners</h2>
+                <div id="sex-partners" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="sex-partners-gender-tab">
+                <h2>Sexual Partners by Gender</h2>
+                <div id="sex-partners-gender" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="sex-partners-athletes-tab">
+                <h2>Sexual Partners by Recruited Athletes</h2>
+                <div id="sex-partners-athletes" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="sex-orientation-tab">
+                <h2>Sexual Partners by Sexual Orientation</h2>
+                <div id="sex-orientation" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Drugs</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#drugs-alcohol-tab" data-toggle="tab">Alcohol Drinkers</a>
+            </li>
+            <li>
+                <a href="#drugs-weed-tab" data-toggle="tab">Marijuana Use</a>
+            </li>
+            <li>
+                <a href="#drugs-hard-tab" data-toggle="tab">Hard Drug Use</a>
+            </li>
+            <li>
+                <a href="#drugs-fake-tab" data-toggle="tab">Fake IDs</a>
+            </li>
+            <li>
+                <a href="#drugs-fake-urban-tab" data-toggle="tab">Fake IDs by Type of Community</a>
+            </li>
+            <li>
+                <a href="#drugs-gender-tab" data-toggle="tab">Drug Use by Gender</a>
+            </li>
+            <li>
+                <a href="#drugs-school-tab" data-toggle="tab">Drug Use by Type of School</a>
+            </li>
+            <li>
+                <a href="#drugs-athletes-tab" data-toggle="tab">Drug Use by Recruited Athletes</a>
+            </li>
+            <li>
+                <a href="#drugs-religion-tab" data-toggle="tab">Drinkers by Religion</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="drugs-alcohol-tab" class="active">
+                <h2>Alcohol Drinkers</h2>
+                <div id="drugs-alcohol"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="drugs-weed-tab">
+                <h2>Marijuana Use</h2>
+                <div id="drugs-weed" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-hard-tab">
+                <h2>Hard Drug Use</h2>
+                <div id="drugs-hard" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-fake-tab">
+                <h2>Fake IDs</h2>
+                <div id="drugs-fake" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="drugs-fake-urban-tab">
+                <h2>Fake IDs by Type of Community</h2>
+                <div id="drugs-fake-urban"-urban class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Mental Health</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#mental-tab" data-toggle="tab">Mental Health Counseling</a>
+            </li>
+            <li>
+                <a href="#mental-income-tab" data-toggle="tab">Mental Health Counseling by Parents' Income</a>
+            </li>
+            <li>
+                <a href="#mental-sexuality-tab" data-toggle="tab">Mental Health Counseling by Sexuality</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="mental-tab" class="active">
+                <h2>Mental Health Counseling</h2>
+                <div id="mental"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen—22 percent—described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="mental-income-tab">
+                <h2>Mental Health Counseling by Parents' Income</h2>
+                <div id="mental-income" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="mental-sexuality-tab">
+                <h2>Mental Health Counseling by Sexuality</h2>
+                <div id="mental-sexuality" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still—24 percent of respondents—characterized themselves either religious or very religious. By contrast, 57 percent of Harvard’s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
