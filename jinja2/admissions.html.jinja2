@@ -3,12 +3,14 @@
 {% block js %}
     <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/admissions.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
 {% block nav_items %}
-    <li>In High School</li>
-    <li>At Harvard</li>
+    <li>The Application</li>
+    <li>Financial Aid</li>
+    <li>College Acceptances</li>
     <li>Athletics</li>
 {% endblock %}
 
@@ -83,31 +85,50 @@
         </script>
     </div>
 
-    <div class="scroll-row" id="regions">
-        <h1>At Harvard</h1>
+    <div class="scroll-row">
+        <h1>Financial Aid</h1>
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#study-habits-future-tab" data-toggle="tab">Study Habits</a>
+                <a href="#financial-aid-tab" data-toggle="tab">Numbers</a>
             </li>
             <li>
-                <a href="#secondary-tab" data-toggle="tab">Secondary/Citation</a>
+                <a href="#parents-income-tab" data-toggle="tab">Income</a>
+            </li>
+            <li>
+                <a href="#urbanity-aid-tab" data-toggle="tab">Urbanity</a>
+            </li>
+            <li>
+                <a href="#counselor-raw-tab" data-toggle="tab">Counseling</a>
+            </li>
+            <li>
+                <a href="#income-counselor-tab" data-toggle="tab">Counseling by Income</a>
             </li>
         </ul>
         <ul class="tab-panes">
-            <li id="study-habits-future-tab">
-                <h2>Anticipated College Study Habits</h2>
-                <div id="study-habits-future"></div>
-                <p>A plurality of respondents indicated that they anticipate studying for between 20 and 29 hours a week in college, and more respondents expect to study 50 or more than 10 or fewer. In contrast, a plurality said they spent fewer than 10 hours a week studying in high school.</p>
+            <li id="financial-aid-tab" class="active">
+                <h2>Harvard Financial Aid</h2>
+                <div id="financial-aid"></div>
+                <p>Fifty-eight percent of respondents reported that they would receive financial aid from the College.</p>
             </li>
-            <li id="secondary-tab">
-                <h2>Anticipated Secondaries and Language Citations</h2>
-                <div id="secondary"></div>
-                <p>Twenty-three percent of respondents intend to pursue both a secondary and a language citation at Harvard, and twenty-eight percent plan to pursue neither.</p>
+            <li id="parents-income-tab">
+                <h2>Income Distribution</h2>
+                <div id="parents-income"></div>
+                <p>14 percent of freshman respondents come from families with reported incomes above $500,000 a year, putting them among the top 1 percent of earners in the United States.</p>
             </li>
-            <li id="concentration-raw-tab">
-                <h2>Anticipated Concentrations</h2>
-                <div id="concentration-raw"></div>
-                <p>Just 11 percent of respondents said that they plan to pursue a concentration in the arts and humanities field. Sixteen percent of the College students concentrate in the humanities, and several months ago, a faculty committee released several reports on the discipline.</p>
+            <li id="urbanity-aid-tab">
+                <h2>Financial Aid by Community Type</h2>
+                <div id="urbanity-aid"></div>
+                <p>Respondents from rural communities were the most likely to report receiving financial aid from the College.</p>
+            </li>
+            <li id="counselor-raw-tab">
+                <h2>College Counseling</h2>
+                <div id="counselor-raw"></div>
+                <p>12.7 percent of respondents reported consulting with private admissions counselors who did not work for their high schools.</p>
+            </li>
+            <li id="income-counselor-tab">
+                <h2>Private Admissions Counseling by Income Bracket</h2>
+                <div id="income-counselor"></div>
+                <p>Students whose families had incomes of $250,000 or more were 2.5 times more likely to have used private admissions counselors than those from families that made under $250,000.</p>
             </li>
         </ul>
     </div>
@@ -118,45 +139,63 @@
         </script>
     </div>
 
-    <div class="scroll-row" id="salary">
-        <h1>Athletics</h1>
+    <div class="scroll-row">
+        <h1>College Acceptances</h1>
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#athletes-raw-tab" data-toggle="tab">Numbers</a>
+                <a href="#application-numbers-tab" data-toggle="tab">Numbers</a>
             </li>
             <li>
-                <a href="#attrition-athletics-tab" data-toggle="tab">Attrition</a>
+                <a href="#early-tab" data-toggle="tab">Early Action</a>
             </li>
             <li>
-                <a href="#concussions-tab" data-toggle="tab">Concussions Numbers</a>
+                <a href="#top-choice-tab" data-toggle="tab">Top Choice</a>
             </li>
             <li>
-                <a href="#concussions-view-tab" data-toggle="tab">Concussions Opinions</a>
+                <a href="#top-choice-early-tab" data-toggle="tab">Top Choice vs. Early Action</a>
             </li>
             <li>
-                <a href="#sector-start-by-school-type-tab" data-toggle="tab">Field by Secondary School</a>
+                <a href="#early-income-tab" data-toggle="tab">Income vs. Early Action</a>
+            </li>
+            <li>
+                <a href="#early-school-type-tab" data-toggle="tab">School Type vs. Early Action</a>
             </li>
         </ul>
         <ul class="tab-panes">
-            <li id="athletes-raw-tab" class="active">
-                <h2>Athletes at Harvard</h2>
-                <div id="athletes-raw"></div>
-                <p>Roughly 20 percent of the Harvard student body are members of a varsity athletics team. 12 percent of incoming freshmen reported being recruited to the College to play a sport, and an additional 9 percent planned to walk on to a team. Over a quarter of those walk-ons said they planned to join one of Harvard’s four crew teams.</p>
+            <li id="application-numbers-tab" class="active">
+                <h2>Applications and Acceptances</h2>
+                <div id="application-numbers"></div>
+                <p>Respondents applied to an average of 6.57 schools and were accepted to an average of 4.68.</p>
             </li>
-            <li id="attrition-athletics-tab">
-                <h2>Attrition from Athletics</h2>
-                <div id="attrition-athletics" class="graph"></div>
-                <p>Harvard does not release numbers on the rate of varsity athletes that play all four years. However, surveyed freshmen anticipated playing for their entire college career at different rates depending on their status as an official recruit or a walk-on, with 93 percent of recruits intending to play all four years but just 47 percent of walk-ons planning to do the same.</p>
+            <li id="early-tab">
+                <h2>Early Action</h2>
+                <div id="early" class="graph"></div>
+                <p>About half of respondents said that they were accepted early to Harvard.</p>
             </li>
-            <li id="concussions-tab">
-                <h2>Athletics and Concussions</h2>
-                <div id="concussions" class="graph"></div>
-                <p>Seventy eight percent of incoming recruited and walk-on athletes have never been concussed. According to Dr. Francis Wang, the head team physician for Harvard Athletics, roughly 55 Harvard athletes incurred a concussion during the 2011-12 season.</p>
+            <li id="top-choice-tab">
+                <h2>Was Harvard Your Top Choice?</h2>
+                <div id="top-choice" class="graph"></div>
+                <p>Harvard was the top choice of 81.1 percent of respondents.</p>
             </li>
-            <li id="concussions-view-tab">
-                <h2>Effect of Concussions on Attitude Towards Sport</h2>
-                <div id="concussions-view" class="graph"></div>
-                <p>The survey revealed different statistics on how concussions affect the way athletes feel about their sport. Of those who had been concussed, 19 percent reported that concussions had changed their approach or desire to play that sport while 5 percent of those who had not been concussed felt similarly. Repeated concussions have been linked to chronic traumatic encephalopathy (CTE), a progressive degenerative brain disease.</p>
+            <li id="top-choice-early-tab">
+                <h2>Top Choice vs. Early Action</h2>
+                <div id="top-choice-early" class="graph"></div>
+                <p>The College was the top choice of 95.8 percent of students who identified themselves as early action admits.</p>
+            </li>
+            <li id="early-income-tab">
+                <h2>Early Action and Regular Admission by Income Bracket</h2>
+                <div id="early-income" class="graph"></div>
+                <p>Respondents whose families had an income level of $250,000 or more were more likely to have been admitted early to Harvard.</p>
+            </li>
+            <li id="early-school-type-tab">
+                <h2>Early Admits by School Type</h2>
+                <div id="early-school-type" class="graph"></div>
+                <p>Students who attended private and parochial schools were more likely to have been admitted early than students who attended public and charter schools. Sixty-two percent of private and parochial school students said they had been admitted early, while 43 percent of respondents from public and charter schools said they had been.</p>
+            </li>
+            <li id="early-race-tab">
+                <h2>Early Admits by Ethnicity</h2>
+                <div id="early-race" class="graph"></div>
+                <p>White respondents were the most likely to report that they were admitted early, at 55 percent. Indian respondents were least likely&mdash;just 32 percent of Indian students reported early acceptance to Harvard.</p>
             </li>
         </ul>
     </div>
@@ -168,4 +207,37 @@
             }
         </script>
     </div>
+
+    <div class="scroll-row">
+        <h1>Athletes</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#athletes-raw-tab" data-toggle="tab">Numbers</a>
+            </li>
+            <li>
+                <a href="#sat-athletes-tab" data-toggle="tab">SAT</a>
+            </li>
+            <li>
+                <a href="#income-athletes-tab" data-toggle="tab">Income</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="athletes-raw-tab" class="active">
+                <h2>Recruited Athletes</h2>
+                <div id="athletes-raw"></div>
+                <p>Twelve percent of respondents identified themselves as recruited athletes.</p>
+            </li>
+            <li id="sat-athletes-tab">
+                <h2>SAT Scores vs. Athletes and Non-Athletes</h2>
+                <div id="sat-athletes" class="graph"></div>
+                <p>Respondents who identified themselves as recruited athletes reported an average SAT composite score more than 170 points lower than the average score reported by non-recruits.</p>
+            </li>
+            <li id="income-athletes-tab">
+                <h2>Parents' Income vs. Recruiting</h2>
+                <div id="income-athletes" class="graph"></div>
+                <p>Respondents from families with incomes under $80,000 were the least likely to be recruited athletes. Eight percent of students from those families reported that they were recruited athletes, while 14 percent of students from families that make over $80,000 said they had been recruited for athletics. </p>
+            </li>
+        </ul>
+    </div>
+
 {% endblock %}
