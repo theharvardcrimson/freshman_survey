@@ -2,7 +2,7 @@ var colorset = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970'
         '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
 var colorindex = 0;
 
-$(function () {	
+$(document).ready(function () {	
 
 	// // Radialize the colors
 	// Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
@@ -19,27 +19,27 @@ $(function () {
     // Makeup of the Class
 
     // Demographics
-    createChart('pie','data/0/0/gender.csv', '#gender');
-    createChart('column','data/0/0/race.csv', '#race');
-    createChart('pie','data/0/0/sexual_orientation.csv', '#sexual-orientation');
-    createChart('pie','data/0/0/birth_order.csv', '#birth-order');
-    createChart('pie','data/0/0/school_type.csv', '#school-type');
-    createChart('pie','data/0/0/athletes_raw.csv', '#athletes-raw');
-    createChart('column','data/0/0/athletes_vs_race.csv', '#athletes-vs-race');
+    // createChart('pie','data/0/0/gender.csv', '#gender');
+    // createChart('column','data/0/0/race.csv', '#race');
+    // createChart('pie','data/0/0/sexual_orientation.csv', '#sexual-orientation');
+    // createChart('pie','data/0/0/birth_order.csv', '#birth-order');
+    // createChart('pie','data/0/0/school_type.csv', '#school-type');
+    // createChart('pie','data/0/0/athletes_raw.csv', '#athletes-raw');
+    // createChart('column','data/0/0/athletes_vs_race.csv', '#athletes-vs-race');
 
-    // Geography
-    createChart('pie','data/0/1/urbanity.csv', '#urbanity');
+    // // Geography
+    // createChart('pie','data/0/1/urbanity.csv', '#urbanity');
 
-    // Employment
-    createChart('pie','data/0/2/starting_salary.csv', '#starting-salary');
-    createMultiChart('column', ['Male', 'Female'], [colorset[colorindex++], colorset[colorindex++]], 
-            ['data/0/2/starting-salary-male.csv', 'data/0/2/starting-salary-female.csv'], "#starting-salary-vs-gender");
-    createMultiChart('bar', ['2017', '2027'], ['#1abc9c', '#ba0600'], 
-            ['data/0/2/sector-start-2017.csv', 'data/0/2/sector-start-2027.csv'], "#sector-start-over-time");
-    createMultiChart('bar', ['Male', 'Female'], ['#71c3ff', '#ba0600'], 
-            ['data/0/2/sector-start-male.csv', 'data/0/2/sector-start-female.csv'], "#sector-start-by-gender");
-    createMultiChart('bar', ['Private', 'Public'], [colorset[colorindex++], colorset[colorindex++]], 
-            ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
+    // // Employment
+    // createChart('pie','data/0/2/starting_salary.csv', '#starting-salary');
+    // createMultiChart('column', ['Male', 'Female'], null, 
+    //         ['data/0/2/starting-salary-male.csv', 'data/0/2/starting-salary-female.csv'], "#starting-salary-vs-gender");
+    // createMultiChart('bar', ['2017', '2027'], ['#1abc9c', '#ba0600'], 
+    //         ['data/0/2/sector-start-2017.csv', 'data/0/2/sector-start-2027.csv'], "#sector-start-over-time");
+    // createMultiChart('bar', ['Male', 'Female'], ['#71c3ff', '#ba0600'], 
+    //         ['data/0/2/sector-start-male.csv', 'data/0/2/sector-start-female.csv'], "#sector-start-by-gender");
+    // createMultiChart('bar', ['Private', 'Public'], null, 
+    //         ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
 
 
     // Academics/Extracurriculars
@@ -55,38 +55,18 @@ $(function () {
     // At Harvard
     createChart('pie','data/2/2/hours_studying_future.csv', '#study-habits-future');
     createChart('pie','data/2/2/secondary_raw.csv', '#secondary');
+    createChart('pie','data/2/2/concentration_raw.csv', '#concentration-raw');
 
     // Athletics
     createMultiChart('column', ['Walk-on', 'Recruited'], null, ['data/2/3/walkons_four_years.csv', 'data/2/3/recruited_four_years.csv'], '#attrition-athletics');
     createChart('bar','data/2/3/concussions.csv', '#concussions');
-    createMultiChart('column', ['Never been concussed', 'Concussed Athletes'], null, ['data/2/3/not_concussed_changed_view.csv', 'data/2/3/concussed_changed_view.csv'], '#concussion-view');
-
-
-	$('.banner').each(function() {
-        var $this = $(this);
-        var unslider = $this.unslider({
-    		speed: 500,               //  The speed to animate each slide (in milliseconds)
-    		delay: 100000000,              //  The delay between slide animations (in milliseconds)
-    		keys: false,               //  Enable keyboard (left, right) arrow shortcuts
-    		dots: true,               //  Display dot navigation
-    		fluid: true              //  Support responsive design. May break non-responsive designs
-    	});
-        var onclick = function () {
-            var fn = this.className.split(' ')[1];
-            unslider.data('unslider')[fn]();
-            return false;
-        };
-        var previous = $this.next('.unslider-arrow').click(onclick);
-        var next = previous.next('.unslider-arrow').click(onclick);
-    });
-                    
+    createMultiChart('column', ['Never been concussed', 'Concussed Athletes'], [colorset[colorindex++], colorset[colorindex++]], ['data/2/3/not_concussed_changed_view.csv', 'data/2/3/concussed_changed_view.csv'], '#concussions-view');                    
 
     $(window).on('debouncedresize', function () {
         for (var chart in Highcharts.charts) {
             Highcharts.charts[chart].redraw();
         }
     });
-
 });
 
 function createChart(type, filename, divsel) {
