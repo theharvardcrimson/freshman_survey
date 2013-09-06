@@ -577,7 +577,7 @@ header ul li.inactive:hover {
 
 .affix {
 	position: fixed;
-	top: 20px;
+	/*top: 40%;*/
 }
 
 .tab-panes {
@@ -704,7 +704,7 @@ header ul li.inactive:hover {
 	color: #bbbbbb;
 	clear: both;
 	text-align: right;
-	padding-right: 5px;
+	padding-right: 15px;
 	margin-bottom: 10px;
 }
 

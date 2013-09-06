@@ -10,7 +10,6 @@
 		<script src="js/jquery-csv.min.js"></script>
 		<script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jquery-animate-shadow.js" type="text/javascript" charset="utf-8"></script>
 
 		<script src="js/highcharts.js"></script>
 		<script src="js/highcharts-more.js"></script>
@@ -24,7 +23,7 @@
 	<body>
 		<header>
 			<div class="wrapper">
-				<a class="header-logo" href="/">
+				<a class="header-logo" href="http://www.thecrimson.com/">
 					<img src="img/logo.png" height="18" width="215" />
 				</a>
 				<ul class="header-nav">
@@ -32,7 +31,7 @@
                     <a href="makeup.html"><li{% if filename=='makeup.html' %} class="active"{% endif %}>Makeup of the Class</li></a>
                     <a href="admissions.html"><li{% if filename=='admissions.html' %} class="active"{% endif %}>Admissions</li></a>
                     <a href="academics.html"><li{% if filename=='academics.html' %} class="active"{% endif %}>Academics/Extracuriculars</li></a>
-                    <a href="lifestyle.html"><li>Lifestyle</li{% if filename=='lifestyle.html' %} class="active"{% endif %}></a>
+                    <a href="lifestyle.html"><li{% if filename=='lifestyle.html' %} class="active"{% endif %}>Lifestyle</li></a>
 				</ul>
 			</div>
 		</header>
@@ -50,8 +49,5 @@
 			</div>
 		</div>
 		{% block extra_content %}{% endblock %}
-		<div id="footer">
-			Created by Joseph Botros, Josh Palay, and Sam Fishman.
-		</div>
 	</body>
 </html>

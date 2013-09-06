@@ -34,11 +34,14 @@ $(function() {
 		$('html, body').animate({
 		    scrollTop: target.offset().top,
 		    scrollLeft: 0
-		}, 1000);				
+		}, 1000);
 	});
+
+	$('#subnav').css('top', (window.innerHeight - $('#subnav').height()) / 2);
 
 	$(window).resize(function() {
 		currentRow = getCurrentRow();
+		$('#subnav').css('top', (window.innerHeight - $('#subnav').height()) / 2);
 	});
 });
 
@@ -46,7 +49,7 @@ $(window).load(function () {
 	$('#subnav').affix({
 		offset: {
 			top: function () {
-				return $('body').children('img').first().height() - 15;
+				return $('body').children('img').first().height() - 15 - (window.innerHeight - $('#subnav').height()) / 2;
 			}
 		}
 	});
