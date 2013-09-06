@@ -7,6 +7,8 @@ $(document).ready(function() {
     createChart('pie','data/2/0/paper_cheaters.csv', '#paper-cheaters');
     createChart('pie','data/2/0/homework_cheaters.csv', '#homework-cheaters');
     createMultiChart('column', ['Public', 'Private'], [colorset[colorindex++], colorset[colorindex++]], ['data/2/0/public_cheating.csv', 'data/2/0/private_cheating.csv'], '#cheating-school-type');    
+    createMultiChart('column', ['Recruited Athlete', 'Not a Recruited Athlete'], [colorset[colorindex++], colorset[colorindex++]], ['data/2/0/recruited_cheaters.csv', 'data/2/0/not_recruited_cheaters.csv'], '#cheating-athlete');    
+    createMultiChart('column', ['Male', 'Female'], [colorset[colorindex++], colorset[colorindex++]], ['data/2/0/male_cheaters.csv', 'data/2/0/female_cheaters.csv'], '#cheating-gender');    
 
     // In High School
     createChart('pie','data/2/1/hours_studying_past.csv', '#study-habits-past');
