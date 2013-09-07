@@ -648,7 +648,7 @@ header ul li.inactive:hover {
 }
 .nav-tabs > li {
   float: left;
-  margin-bottom: -1px;
+  margin-bottom: 0px;
 }
 .nav-tabs > li > a {
   /*margin-right: 2px;*/

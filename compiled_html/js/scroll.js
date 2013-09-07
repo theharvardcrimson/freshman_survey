@@ -19,10 +19,12 @@ $(function() {
 
 	$(window).scroll(function() {
 		currentRow = getCurrentRow();
-		var idx = currentRow.index('.scroll-row');
-		$('#subnav li').removeClass('active');
-		if (idx != 0) {
-			$('#subnav li').eq(idx-1).addClass('active');
+		if (currentRow.length > 0) {
+			var idx = currentRow.index('.scroll-row');
+			$('#subnav li').removeClass('active');
+			if (idx != 0) {
+				$('#subnav li').eq(idx-1).addClass('active');
+			}
 		}
 	});
 
