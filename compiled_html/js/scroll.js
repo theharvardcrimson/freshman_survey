@@ -40,10 +40,12 @@ $(function() {
 	});
 
 	$('#subnav').css('top', (window.innerHeight - $('#subnav').height()) / 2);
+	$('img.full-width').css('margin-top', $('header').height() - 36);
 
 	$(window).resize(function() {
 		currentRow = getCurrentRow();
 		$('#subnav').css('top', (window.innerHeight - $('#subnav').height()) / 2);
+		$('img.full-width').css('margin-top', $('header').height() - 36);
 	});
 });
 

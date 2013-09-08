@@ -30,6 +30,7 @@ function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
           var chart = nv.models.scatterChart()
                     .showDistX(true)
                     .showDistY(true)
+                    .showLegend(false)
                     .color([color]);
           chart.xAxis.tickFormat(d3.format('.02f'));
           chart.yAxis.tickFormat(d3.format('.02f'));
@@ -39,7 +40,6 @@ function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
         d3.select('#' + wrapper)
         .datum([
             {
-                key: 'Group 1', 
                 values: vals
             }
          ])
@@ -110,11 +110,7 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            style: {position: "inherit"},
-            spacingTop: 0,
-            spacingLeft: 0,
-            spacingRight: 0,
-            spacingBottom: 0
+            style: {position: "inherit"}
         },
         credits: {
             enabled: false
@@ -202,6 +198,10 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
     }
     else if (type == 'bar') {
         options = $.extend(options, barOptions);
+    }
+
+    if (divsel == '#religion-religion') {
+        options.yAxis.categories = ['Not at all religious','Not very religious','Somewhat religious','Religious','Very religious',''];
     }
 
     $.each(filenames, function(datanum, filename){

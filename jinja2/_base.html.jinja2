@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 
+		<title>The Harvard Crimson | Class of 2017</title>
+
 		<link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="css/fresh.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -58,6 +60,8 @@
                 {% block content %}{% endblock %}
 			</div>
 
+			{% block extra_content %}{% endblock %}
+
 		    <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
 		        <script type='text/javascript'>
 		            if ($(window).width >= 728) {
@@ -66,6 +70,5 @@
 		        </script>
 		    </div>
 		</div>
-		{% block extra_content %}{% endblock %}
 	</body>
 </html>

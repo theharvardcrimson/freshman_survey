@@ -3,7 +3,7 @@ $(document).ready(function() {
     // Religion
     createChart('pie','data/3/0/religion_raw.csv', '#religion');
     createChart('column','data/3/0/religiosity_raw.csv', '#religiosity');
-    createMultiChart('bar', ['Catholic', 'Protestant', 'Jewish', 'Muslim', 'Hindu', 'Agnostic', 'Atheist'], null, ['data/3/0/catholic_race.csv', 'data/3/0/protestant_race.csv', 'data/3/0/jew_race.csv', 'data/3/0/muslim_race.csv', 'data/3/0/hindu_race.csv', 'data/3/0/agnostic_race.csv', 'data/3/0/atheist_race.csv'], '#religion-race');
+    createMultiChart('bar', ['Catholic', 'Protestant', 'Jewish', 'Muslim', 'Buddhist', 'Hindu', 'Mormon', 'Agnostic', 'Atheist', 'Other'], null, ['data/3/0/catholic_race.csv', 'data/3/0/protestant_race.csv', 'data/3/0/jew_race.csv', 'data/3/0/muslim_race.csv', 'data/3/0/buddhist_race.csv', 'data/3/0/hindu_race.csv', 'data/3/0/mormon_race.csv', 'data/3/0/agnostic_race.csv', 'data/3/0/atheist_race.csv', 'data/3/0/other_race.csv'], '#religion-race');
     createMultiChart('bar', ['Not at all religious', 'Not very religious', 'Somewhat religious', 'Religious', 'Very religious'], null, ['data/3/0/religiosity_income_0.csv', 'data/3/0/religiosity_income_1.csv', 'data/3/0/religiosity_income_2.csv', 'data/3/0/religiosity_income_3.csv', 'data/3/0/religiosity_income_4.csv'], '#religion-income');
     createNumericChart('column','data/3/0/religion_religiosity.csv', '#religion-religion');
     createMultiChart('bar', ['Catholic', 'Protestant', 'Jewish', 'Muslim', 'Hindu', 'Agnostic', 'Atheist'], null, ['data/3/0/catholic_region.csv', 'data/3/0/protestant_region.csv', 'data/3/0/jew_region.csv', 'data/3/0/muslim_region.csv', 'data/3/0/hindu_region.csv', 'data/3/0/agnostic_region.csv', 'data/3/0/atheist_region.csv'], '#religion-region');
