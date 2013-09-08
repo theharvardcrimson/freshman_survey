@@ -251,7 +251,7 @@ div.card {
 	text-align: center;
 	font-family: 'Colaborate Thin';
 	font-size: 30px;
-	margin: 10px 0;		
+	margin: 10px 0;
 }
 
 .scatter {
@@ -533,6 +533,7 @@ header ul li.inactive:hover {
 
 	#paper {
 	    /*width: 100%;*/
+	    margin-bottom: 20px;
 	}
 
     #regions .banner ul li{
@@ -547,7 +548,7 @@ header ul li.inactive:hover {
 
 	#regions-right h3 {
 		display: block;
-		margin: 20px 0;
+		margin: 10px 0;
 	}
 
 	.region-stat {
