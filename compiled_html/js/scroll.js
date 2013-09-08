@@ -51,7 +51,7 @@ $(window).load(function () {
 	$('#subnav').affix({
 		offset: {
 			top: function () {
-				return $('body').children('img').first().height() - 15 - (window.innerHeight - $('#subnav').height()) / 2;
+				return $('body').children('img').first().height() - (window.innerHeight - $('#subnav').height()) / 2;
 			}
 		}
 	});
