@@ -5,6 +5,7 @@ $(document).ready(function() {
     createFullChart('column', ['Male', 'Female'], null, ['data/1/0/sat_male.csv', 'data/1/0/sat_female.csv'], '', '#sat-gender');    
     createFullChart('column', ['Public', 'Private'], null, ['data/1/0/sat_public.csv', 'data/1/0/sat_private.csv'], '', '#sat-school-type');    
     createNumericChart('bar','data/1/0/sat_ethnicity.csv', '#sat-ethnicity');
+    csv_to_scatter('data/1/0/gpa_sat.csv', 'sat-gpa', 'GPA', 'SAT Score');
 
     // Financial Aid
     createChart('pie','data/1/1/financial_aid_raw.csv', '#financial-aid');
@@ -14,6 +15,7 @@ $(document).ready(function() {
     createChart('column','data/1/1/income_counselor.csv', '#income-counselor');
 
     // College Acceptances
+    csv_to_scatter('data/1/2/applied_accepted.csv', 'application-numbers', 'Applied to', 'Accepted to');
     createChart('pie','data/1/2/early.csv', '#early');
     createChart('pie','data/1/2/top_choice.csv', '#top-choice');
     createChart('pie','data/1/2/top_choice_early.csv', '#top-choice-early');

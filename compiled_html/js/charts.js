@@ -12,6 +12,69 @@ $(document).ready(function () {
     });
 });
 
+function add_scatter_plot(vals, wrapper, xlabel, ylabel) {
+    console.log(d3.scale.category10().range());
+    nv.addGraph({
+      generate: function() {
+          var chart = nv.models.scatterChart()
+                    .showDistX(true)
+                    .showDistY(true)
+                    .color(d3.scale.category10().range());
+          chart.xAxis.tickFormat(d3.format('.02f'));
+          chart.yAxis.tickFormat(d3.format('.02f'));
+          chart.xAxis.axisLabel(xlabel);
+          chart.yAxis.axisLabel(ylabel);
+    
+        d3.select('#' + wrapper)
+        .datum([
+            {
+                key: 'Group 1', 
+                values: vals
+            }
+         ])
+        .transition().duration(500)
+          .call(chart);
+        
+        d3.select(".nv-legendWrap")
+            .attr("display", "none");
+
+        nv.utils.windowResize(chart.update);
+    
+        return chart;
+      }
+    });
+}
+
+function csv_to_scatter(filename, wrapper, xlabel, ylabel) {
+    var vals = []
+    $.get(filename, function(data) {
+        // Split the lines
+        data = data.replace(/\r(?!\n)/g, "\n");
+        var lines = data.split('\n');
+        var items_last = [0, 0];
+        var size = 1;
+        $.each(lines, function(lineNo, line) {
+            var items = line.split(',');
+            items[0] = parseFloat(items[0]);
+            items[1] = parseFloat(items[1])
+
+            if (items[0] == items_last[0] && items[1] == items_last[1]) {
+              size++;
+            }
+            else if (items_last[0] != 0) {
+              vals.push({x: items_last[0], y: items_last[1], size: size});
+              size = 1;
+            }
+            if (lineNo == lines.length - 1) {
+              vals.push({x: items[0], y: items[1], size: size});
+            }
+            items_last = [items[0],items[1]];
+        });
+
+        add_scatter_plot(vals, wrapper, xlabel, ylabel);
+    });
+}
+
 function createChart(type, filename, divsel) {
     createMultiChart(type, null, null, [filename], divsel);
 }

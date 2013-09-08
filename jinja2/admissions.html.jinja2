@@ -26,10 +26,7 @@
         <h1>The Application</h1>
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#sat-tab" data-toggle="tab">SAT</a>
-            </li>
-            <li>
-                <a href="#gpa-tab" data-toggle="tab">GPA</a>
+                <a href="#sat-tab" data-toggle="tab">SAT/GPA</a>
             </li>
             <li>
                 <a href="#sat-ethnicity-tab" data-toggle="tab">SAT by Ethnicity</a>
@@ -46,14 +43,9 @@
         </ul>
         <ul class="tab-panes">
             <li id="sat-tab" class="active">
-                <h2>Average SAT Scores</h2>
-                <div id="sat"></div>
+                <h2>SAT/GPA</h2>
+                <div class="scatter"><svg id="sat-gpa"></svg></div>
                 <p>Freshmen reported an average composite SAT score of 2237. Women slightly outscored men, 2246 vs. 2229. The reported average subject score was consistent across the three sections, with an average 748 in the math section, 746 on writing, and 744 on critical reading.</p>
-            </li>
-            <li id="gpa-tab">
-                <h2>Average GPAs</h2>
-                <div id="gpa" class="graph"></div>
-                <p>The average self-reported unweighted GPA on a 4.0 scale among the freshman class was 3.94. Fifty-four percent of students reported a perfect 4.0, and the lowest score reported was a 3.0.</p>
             </li>
             <li id="sat-ethnicity-tab">
                 <h2>Average SAT Scores by Ethnicity</h2>
@@ -163,7 +155,7 @@
         <ul class="tab-panes">
             <li id="application-numbers-tab" class="active">
                 <h2>Applications and Acceptances</h2>
-                <div id="application-numbers"></div>
+                <div class="scatter"><svg id="application-numbers"></svg></div>
                 <p>Respondents applied to an average of 6.57 schools and were accepted to an average of 4.68.</p>
             </li>
             <li id="early-tab">
