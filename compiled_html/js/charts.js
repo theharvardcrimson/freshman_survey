@@ -2,7 +2,13 @@ var colorset = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970'
         '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
 var colorindex = 0;
 
-$(document).ready(function () {	
+$(document).ready(function () {
+
+    $('a[data-toggle="tab"]').on('shown', function (e) {
+        alert('hi');
+        $(window).trigger('resize');
+    });
+
     $(window).on('debouncedresize', function () {
         for (var chart in Highcharts.charts) {
             if (Highcharts.charts[chart] != null) {
@@ -138,6 +144,7 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
                 size: '60%',
                 allowPointSelect: true,
                 cursor: 'pointer',
+                colors: [],
                 dataLabels: {
                     enabled: true,
                     color: '#000000',
@@ -203,8 +210,8 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
             if (colors != null) {
                 options.series[datanum]['color'] = colors[datanum];
             }
-            else {
-                options.series[datanum]['color'] = colorset[colorindex++];
+            else if (type != 'pie') {
+                options.series[datanum]['color'] = colorset[colorindex++ % colorset.length];
             }
 
             // Iterate over the lines and add categories or series
@@ -215,6 +222,7 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
 
                     if (type == 'pie') {
                         options.series[datanum].data.push([items[0], parseFloat(items[1])]);
+                        options.plotOptions.pie.colors.push(colorset[colorindex++ % colorset.length]);
                     }
                     else if (type == 'column') {
                         if (datanum == 0) {
