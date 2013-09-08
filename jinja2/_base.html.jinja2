@@ -34,7 +34,7 @@
                     <a href="makeup.html"><li{% if filename=='makeup.html' %} class="active"{% endif %}>Makeup of the Class</li></a>
                     <a href="admissions.html"><li{% if filename=='admissions.html' %} class="active"{% endif %}>Admissions</li></a>
                     <a href="academics.html"><li{% if filename=='academics.html' %} class="active"{% endif %}>Academics/Extracurriculars</li></a>
-                    <a href="lifestyle.html"><li{% if filename=='lifestyle.html' %} class="active"{% endif %}>Lifestyle</li></a>
+                    <a href="lifestyle.html"><li{% if filename=='lifestyle.html' %} class="active"{% endif %}>Beliefs/Lifestyle</li></a>
 				</ul>
 			</div>
 		</header>
@@ -50,6 +50,14 @@
 			<div id="main">
                 {% block content %}{% endblock %}
 			</div>
+
+		    <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
+		        <script type='text/javascript'>
+		            if ($(window).width >= 728) {
+		                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_728x90'); });
+		            }
+		        </script>
+		    </div>
 		</div>
 		{% block extra_content %}{% endblock %}
 	</body>

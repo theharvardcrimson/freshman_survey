@@ -27,8 +27,8 @@ $(document).ready(function() {
 
     // Athletics
     createChart('pie','data/0/0/athletes_raw.csv', '#athletes-raw');
-    createMultiChart('column', ['Walk-on', 'Recruited'], null, ['data/2/3/walkons_four_years.csv', 'data/2/3/recruited_four_years.csv'], '#attrition-athletics');
-    createChart('bar','data/2/3/concussions.csv', '#concussions');
+    createChart('bar', 'data/2/3/four_years.csv', '#attrition-athletics');
+    createChart('column','data/2/3/concussions.csv', '#concussions');
     createMultiChart('column', ['Never been concussed', 'Concussed Athletes'], null, ['data/2/3/not_concussed_changed_view.csv', 'data/2/3/concussed_changed_view.csv'], '#concussions-view');
 
     var width = $('.graph').first().parents('.scroll-row').first().width();
