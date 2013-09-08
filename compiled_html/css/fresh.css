@@ -254,6 +254,12 @@ div.card {
 	margin: 10px 0;		
 }
 
+.scatter {
+	width: 85%;
+	margin: 0 auto;
+	height: 400px;
+}
+
 .scroll-row {
 	margin: 0 auto;
 	max-width: 800px;
