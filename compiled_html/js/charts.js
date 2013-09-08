@@ -12,14 +12,13 @@ $(document).ready(function () {
     });
 });
 
-function add_scatter_plot(vals, wrapper, xlabel, ylabel) {
-    console.log(d3.scale.category10().range());
+function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
     nv.addGraph({
       generate: function() {
           var chart = nv.models.scatterChart()
                     .showDistX(true)
                     .showDistY(true)
-                    .color(d3.scale.category10().range());
+                    .color([color]);
           chart.xAxis.tickFormat(d3.format('.02f'));
           chart.yAxis.tickFormat(d3.format('.02f'));
           chart.xAxis.axisLabel(xlabel);
@@ -45,7 +44,7 @@ function add_scatter_plot(vals, wrapper, xlabel, ylabel) {
     });
 }
 
-function csv_to_scatter(filename, wrapper, xlabel, ylabel) {
+function csv_to_scatter(filename, wrapper, xlabel, ylabel, color) {
     var vals = []
     $.get(filename, function(data) {
         // Split the lines
@@ -71,7 +70,7 @@ function csv_to_scatter(filename, wrapper, xlabel, ylabel) {
             items_last = [items[0],items[1]];
         });
 
-        add_scatter_plot(vals, wrapper, xlabel, ylabel);
+        add_scatter_plot(vals, wrapper, xlabel, ylabel, color);
     });
 }
 
