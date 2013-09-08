@@ -24,8 +24,7 @@
     createMultiChart('bar', ['Private', 'Public'], null, 
             ['data/0/2/sector-start-private.csv', 'data/0/2/sector-start-public.csv'], "#sector-start-by-school-type");
 
-    var width = $('.graph').first().parents('.scroll-row').first().width();
-    $('.graph').width(width);
+    $(window).trigger('resize');
     for (var chart in Highcharts.charts) {
         if (Highcharts.charts[chart] != null) {
             Highcharts.charts[chart].redraw();

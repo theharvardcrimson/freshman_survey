@@ -26,8 +26,7 @@ $(document).ready(function() {
     createNumericChart('bar','data/1/3/recruited_sat.csv', '#sat-athletes');
     createChart('column','data/1/3/recruited_income.csv', '#income-athletes');
 
-    var width = $('.graph').first().parents('.scroll-row').first().width();
-    $('.graph').width(width);
+    $(window).trigger('resize');
     for (var chart in Highcharts.charts) {
         if (Highcharts.charts[chart] != null) {
             Highcharts.charts[chart].redraw();
