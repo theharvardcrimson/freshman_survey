@@ -4,8 +4,14 @@ var colorindex = 0;
 
 $(document).ready(function () {
 
-    $('a[data-toggle="tab"]').on('shown', function (e) {
-        alert('hi');
+    $('.nav-tabs li a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        $(window).trigger('resize');
+    });
+
+    // Never actually gets called...
+    $('a[data-toggle="tab"]').on('show', function (e) {
         $(window).trigger('resize');
     });
 
